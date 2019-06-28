@@ -1,8 +1,13 @@
-# Projeto Integrador Digital House - Nome a ser Definido
+# Projeto TDB
+##### Projeto Integrador Digital House 
 ![GitHub last commit](https://img.shields.io/github/last-commit/almeidarenato/projetointegrador-dh-tbd.svg?style=plastic)
 
-### Squad
- - Diogo
- - Djorge
- - Raul
- - Renato
+
+### Equipe
+
+| Nome | GitHub |
+| ------------- | ------------- |
+| Diogo  | https://github.com/diogocostad8c |
+| Djorge  |https://github.com/Djordsman  |
+| Raul|https://github.com/raul-rangel|
+| Renato|https://github.com/almeidarenato|
