@@ -16,7 +16,7 @@ E-commerce com informações detalhadas e modelos de smartphones e notas de prof
 
 Cliente poderá ver todas as informações sobre os aparelhos das principais marcas, comparar entre eles e ao final comprar sem sair do site.
 
-### Equipe
+## Equipe
 
 | Nome   | GitHub                           |
 | ------ | -------------------------------- |
