@@ -6,11 +6,11 @@
 
 ## Índice
 
-[1. Escopo](#1.Escopo)
+[1. Escopo](#1escopo)
 
-[2. Equipe](#2.Equipe)
+[2. Equipe](#2equipe)
 
-[3. Sprint](#3.Sprint)
+[3. Sprint](#3sprint)
 
 ## 1.Escopo
 
