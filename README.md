@@ -4,19 +4,27 @@
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/almeidarenato/projetointegrador-dh-tbd.svg?style=plastic)
 
-## Escopo
+## Índice
 
-#### Tipo de projeto:
+[1. Escopo](#1.Escopo)
+
+[2. Equipe](#2.Equipe)
+
+[3. Sprint](#3.Sprint)
+
+## 1.Escopo
+
+#### 1.1 Tipo de projeto:
 
 E-commerce de smartphones
 
-#### Diferenciais:
+#### 1.2 Diferenciais:
 
 E-commerce com informações detalhadas e modelos de smartphones e notas de profissionais e notas de usuários.
 
 Cliente poderá ver todas as informações sobre os aparelhos das principais marcas, comparar entre eles e ao final comprar sem sair do site.
 
-## Equipe
+## 2.Equipe
 
 | Nome   | GitHub                           |
 | ------ | -------------------------------- |
@@ -24,3 +32,5 @@ Cliente poderá ver todas as informações sobre os aparelhos das principais mar
 | Djorge | https://github.com/Djordsman     |
 | Raul   | https://github.com/raul-rangel   |
 | Renato | https://github.com/almeidarenato |
+
+## 3.Sprint
