@@ -1,6 +1,6 @@
-# Projeto TBD
+# Projeto PhoneVerse
 
-##### Projeto Integrador Digital House
+### Projeto Integrador **Digital House**
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/almeidarenato/projetointegrador-dh-tbd.svg?style=plastic)
 
@@ -32,3 +32,12 @@ Cliente poderá ver todas as informações sobre os aparelhos das principais mar
 | Renato | https://github.com/almeidarenato |
 
 ## 3.Sprint
+
+### **Sprint 1** - 03/07
+
+#### Atividades:
+
+1. Definição do Nome :heavy_check_mark:
+2. Definição do Template :heavy_check_mark:
+3. Criação do Repositório no git :heavy_check_mark:
+4. Commit Inicial com os dados do projeto :heavy_check_mark:
