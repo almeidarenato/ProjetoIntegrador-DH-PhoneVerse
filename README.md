@@ -33,7 +33,7 @@ Cliente poderá ver todas as informações sobre os aparelhos das principais mar
 
 ## 3.Sprints
 
-:ballot*box_with_check: \_Data de Início* - 24/07/2019
+:ballot_box_with_check: Data de Início - 24/07/2019
 
 ### :white_check_mark: **Sprint 1** - 03/07
 
