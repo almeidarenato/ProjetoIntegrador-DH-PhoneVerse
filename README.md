@@ -8,11 +8,11 @@
 
 - [1. Escopo](#1escopo)
 - [2. Equipe](#2equipe)
-- [3. Sprint](#3sprint)
+- [3. Sprint](#3sprints)
 
 ## 1.Escopo
 
-#### 1.1 Tipo de projeto:
+##### 1.1 Tipo de projeto:
 
 E-commerce de smartphones
 
@@ -31,13 +31,15 @@ Cliente poderá ver todas as informações sobre os aparelhos das principais mar
 | Raul   | https://github.com/raul-rangel   |
 | Renato | https://github.com/almeidarenato |
 
-## 3.Sprint
+## 3.Sprints
 
-### **Sprint 1** - 03/07
+:ballot*box_with_check: \_Data de Início* - 24/07/2019
+
+### :white_check_mark: **Sprint 1** - 03/07
 
 #### Atividades:
 
-1. Definição do Nome :heavy_check_mark:
-2. Definição do Template :heavy_check_mark:
-3. Criação do Repositório no git :heavy_check_mark:
-4. Commit Inicial com os dados do projeto :heavy_check_mark:
+1. Definição do Nome
+2. Definição do Template
+3. Criação do Repositório no git
+4. Commit Inicial com os dados do projeto
