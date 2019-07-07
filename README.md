@@ -33,9 +33,9 @@ Cliente poderá ver todas as informações sobre os aparelhos das principais mar
 
 ## 3.Sprints
 
-:ballot_box_with_check: Data de Início - 24/06/2019
+### Data de Início - 24/06/2019
 
-### :white_check_mark: Sprint 1 - 03/07/2019
+### Sprint 1 - 03/07/2019
 
 #### Atividades:
 
@@ -43,3 +43,12 @@ Cliente poderá ver todas as informações sobre os aparelhos das principais mar
 2. Definição do Template
 3. Criação do Repositório no git
 4. Commit Inicial com os dados do projeto
+
+### Sprint 2 - 17/07/2019
+
+#### Atividades:
+
+1. Aplicar os Estilos da Página - CSS
+2. Determinar que todas as páginas estejam com responsividade
+3. Aplicar o conceito DRY - Don't Repeat Yourself
+4. Aplicar efeitos com javascript
