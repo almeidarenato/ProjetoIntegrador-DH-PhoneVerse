@@ -20,7 +20,7 @@
 	<link href="assets/styles/productlist/bootstrap.css" rel="stylesheet" type="text/css" />
 
 	<!-- Font awesome 5 -->
-	<link href="fonts/fontawesome/assets/styles/productlist/fontawesome-all.min.css" type="text/css" rel="stylesheet">
+	<link href="assets/fonts/fontawesome/assets/styles/productlist/fontawesome-all.min.css" type="text/css" rel="stylesheet">
 
 	<!-- custom style -->
 	<link href="assets/styles/productlist/ui.css" rel="stylesheet" type="text/css" />

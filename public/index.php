@@ -28,10 +28,28 @@
 
   </nav>
   <div class="container col-md-12">
-    <div class="split left">
+    <div class="split left d-flex">
       <h1>Me ajude a escolher</h1>
-      <h2> Deste lado, nós te mostraremos as melhores opções de aparelhos com base em suas respostas em um rápido questionário </h2>
-      <!-- <div class="typeform-widget" data-url="https://raulrangel489504.typeform.com/to/GwaahJ" style="width: 50%; height: 350px;"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script> <div style="font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;"> powered by <a href="https://admin.typeform.com/signup?utm_campaign=GwaahJ&utm_source=typeform.com-14237431-Basic&utm_medium=typeform&utm_content=typeform-embedded-poweredbytypeform&utm_term=EN" style="color: #999" target="_blank">Typeform</a> </div> -->
+      <p>Deste lado, nós te mostraremos as melhores opções de aparelhos com base em suas respostas em um rápido questionário </p>
+
+      <div class="typeform-widget" data-url="https://raulrangel489504.typeform.com/to/GwaahJ" style="width: 50%; height: 350px;"></div>
+      <script>
+        (function() {
+          var qs, js, q, s, d = document,
+            gi = d.getElementById,
+            ce = d.createElement,
+            gt = d.getElementsByTagName,
+            id = "typef_orm",
+            b = "https://embed.typeform.com/";
+          if (!gi.call(d, id)) {
+            js = ce.call(d, "script");
+            js.id = id;
+            js.src = b + "embed.js";
+            q = gt.call(d, "script")[0];
+            q.parentNode.insertBefore(js, q)
+          }
+        })()
+      </script>
     </div>
     <div class="split right">
       <h1>Eu sei exatamente<br>oque preciso!</h1>
