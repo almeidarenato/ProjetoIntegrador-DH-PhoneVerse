@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 /* ========================
 Bootstrap with custom variables
@@ -6,3 +7,13 @@ Bootstrap with custom variables
 @import "variables-custom";
 
 @import "bootstrap-assets/bootstrap";  
+=======
+
+/* ========================
+Bootstrap with custom variables
+=================== */
+// We'll include bootstrap variables to override bootstrap variables,
+@import "variables-custom";
+
+@import "bootstrap-assets/bootstrap";  
+>>>>>>> master
