@@ -1,59 +1,60 @@
-<!DOCTYPE html>
-<html lang="pt_BR">
+<?php
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+/**
+ * Laravel - A PHP Framework For Web Artisans
+ *
+ * @package  Laravel
+ * @author   Taylor Otwell <taylor@laravel.com>
+ */
 
-  <!-- Split Page CSS & JS -->
-  <link rel="stylesheet" href="assets/styles/split.css">
-  <script defer src='assets/scripts/split.js'></script>
+define('LARAVEL_START', microtime(true));
 
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css?family=Titillium+Web:600&display=swap" rel="stylesheet">
+/*
+|--------------------------------------------------------------------------
+| Register The Auto Loader
+|--------------------------------------------------------------------------
+|
+| Composer provides a convenient, automatically generated class loader for
+| our application. We just need to utilize it! We'll simply require it
+| into the script here so that we don't have to worry about manual
+| loading any of our classes later on. It feels great to relax.
+|
+*/
 
-  <!-- Bootstrap CSS & JS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+require __DIR__.'/../vendor/autoload.php';
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+/*
+|--------------------------------------------------------------------------
+| Turn On The Lights
+|--------------------------------------------------------------------------
+|
+| We need to illuminate PHP development, so let us turn on the lights.
+| This bootstraps the framework and gets it ready for use, then it
+| will load up this application so that we can run it and send
+| the responses back to the browser and delight our users.
+|
+*/
 
-  <title>PhoneVerse</title>
-</head>
+$app = require_once __DIR__.'/../bootstrap/app.php';
 
-<body>
-  <nav>
+/*
+|--------------------------------------------------------------------------
+| Run The Application
+|--------------------------------------------------------------------------
+|
+| Once we have the application, we can handle the incoming request
+| through the kernel, and send the associated response back to
+| the client's browser allowing them to enjoy the creative
+| and wonderful application we have prepared for them.
+|
+*/
 
-  </nav>
-  <div class="container col-md-12">
-    <div class="split left d-flex">
-      <h1>Me ajude a escolher</h1>
-      <p>Deste lado, nós te mostraremos as melhores opções de aparelhos com base em suas respostas em um rápido questionário </p>
+$kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
 
-      <div class="typeform-widget" data-url="https://raulrangel489504.typeform.com/to/GwaahJ" style="width: 50%; height: 350px;"></div>
-      <script>
-        (function() {
-          var qs, js, q, s, d = document,
-            gi = d.getElementById,
-            ce = d.createElement,
-            gt = d.getElementsByTagName,
-            id = "typef_orm",
-            b = "https://embed.typeform.com/";
-          if (!gi.call(d, id)) {
-            js = ce.call(d, "script");
-            js.id = id;
-            js.src = b + "embed.js";
-            q = gt.call(d, "script")[0];
-            q.parentNode.insertBefore(js, q)
-          }
-        })()
-      </script>
-    </div>
-    <div class="split right">
-      <h1>Eu sei exatamente<br>oque preciso!</h1>
-      <h2> Já Deste lado, você poderá escolher cada detalhe especifico dos aparelhos que deseja ver. </h2>
-    </div>
-  </div>
-</body>
+$response = $kernel->handle(
+    $request = Illuminate\Http\Request::capture()
+);
+
+$response->send();
+
+$kernel->terminate($request, $response);
