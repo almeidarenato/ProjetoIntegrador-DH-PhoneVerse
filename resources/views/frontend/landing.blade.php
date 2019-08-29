@@ -190,18 +190,93 @@
     </section>
     <!-- /Section: services -->
     <!-- iframe 1 -->
-    <div class="modal fade me-ajude-a-escolher" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
+    <div class="modal fade me-ajude-a-escolher" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
+                Olá, tudo bem? Nós somos a Phoneverse e estamos aqui para te ajudar a encontrar seu novo celular. Do lado esquerdo, iremos guia-lo por meio de breves perguntas sobre seus gostos e necessidades
 
+                1 - Vamos começar? Primeiramente, qual o seu nome?
+
+                2 - Olá {nome} ! Então você precisa de um novo celular? vamos te ajudar, qual a sua idade?
+
+                3 - Agora nos conte o motivo de você precisar de um novo aparelho.
+                > Meu atual quebrou :(
+                > Meu celular vive na tomada, parece telefone fixo (bateria não dura)
+                > Meu celular trava
+                > Enjoei da cara dele
+
+                4 - Qual o seu aparelho atual?
+
+                5- Você usa mais o celular para:
+                > Jogar (e rodar benchmarks pra esfregar na cara dos outros :D)
+                > Acessar redes sociais e ouvir musica
+                > Assistir vídeos e ler
+                > Trabalhar
+                > Tirar Fotos e Gravar vídeos
+                > Fazer Ligações (sério? O.o)
+
+                6 - Agora, Nos diga seu e-mail
+
+                7 - Crie uma senha para cadastrarmos você e salvarmos suas respostas
+
+                Obrigado! Aguarde que vamos te direcionar para as melhores opções para você ;)
             </div>
         </div>
     </div>
     <!-- /iframe2 -->
-    <div class="modal fade eu-sei" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
+    <div class="modal fade eu-sei" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
+                Olá, tudo bem? Nós somos a Phoneverse e estamos aqui para te ajudar a encontrar seu novo celular. Aqui você pode selecionar as especificações que mais te chamam a atenção:
 
+                1 - Marca
+                > Motorola
+                > Apple
+                > Samsung
+                > Xiaomi
+                > LG
+                > Asus
+
+                2 - Versão do Sistema
+                >
+                >
+                >
+                >
+                >
+
+                3 - Processador
+                >
+                >
+                >
+                >
+
+                4- Tamanho
+
+                Range
+
+                5 - Memoria RAM
+
+                Range
+
+                6 - Memoria Interna
+
+                7 - Camera
+                >
+                >
+                >
+                >
+
+                8 - Bateria
+
+                9 - Preço
+
+                range duplo
+
+                10 - Agora, Nos diga seu e-mail
+
+                11 - Crie uma senha para cadastrarmos você e salvarmos suas respostas
+
+                Obrigado! Aguarde que vamos te direcionar para as melhores opções para você ;)
             </div>
         </div>
     </div>
