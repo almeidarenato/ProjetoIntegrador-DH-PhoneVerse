@@ -26,6 +26,7 @@
     <!-- Squad theme CSS -->
     <link href="frontend/css/style.css" rel="stylesheet">
     <link href="frontend/color/default.css" rel="stylesheet">
+    <link rel="stylesheet" href="frontend/css/questionario.css">
 
 
 </head>
@@ -188,16 +189,22 @@
 
     </section>
     <!-- /Section: services -->
-    <!-- iframe -->
+    <!-- iframe 1 -->
     <div class="modal fade me-ajude-a-escolher" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
-                <iframe width="100%" height="500" frameborder="0" src={{URL::to('frontend/questionario.php')}}></iframe>
+
             </div>
         </div>
     </div>
-    <!-- /iframe -->
+    <!-- /iframe2 -->
+    <div class="modal fade eu-sei" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
 
+            </div>
+        </div>
+    </div>
 
 
     <!-- Section: contact -->
@@ -289,8 +296,8 @@
     <!-- Custom Theme JavaScript -->
     <script src="frontend/js/custom.js"></script>
     <script src="frontend/contactform/contactform.js"></script>
+    <script src="frontend/js/questionario.js"></script>
 
 </body>
-
 
 </html>
