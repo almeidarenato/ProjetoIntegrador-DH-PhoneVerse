@@ -227,28 +227,77 @@
     <div class="modal fade eu-sei" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                Olá, tudo bem? Nós somos a Phoneverse e estamos aqui para te ajudar a encontrar seu novo celular. Aqui você pode selecionar as especificações que mais te chamam a atenção:
+                <h4>Olá, tudo bem? Nós somos a Phoneverse e estamos aqui para te ajudar a encontrar seu novo celular. Aqui você pode selecionar as especificações que mais te chamam a atenção:</h4>
 
-                1 - Marca
-                > Motorola
-                > Apple
-                > Samsung
-                > Xiaomi
-                > LG
-                > Asus
+                <h5>Marca</h5>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Motorola</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Apple</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Samsung</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Xiaomi</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">LG</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Asus</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Google Pixel</label>
+                </div>
 
-                2 - Versão do Sistema
-                >
-                >
-                >
-                >
-                >
+                <h5>Versão do Sistema</h5>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">iOs 12</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Android 7</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Android 8</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Android 9</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Android 10</label>
+                </div>
 
-                3 - Processador
-                >
-                >
-                >
-                >
+                <h5>Processador</h5>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Snapdragon</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Exynos</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Apple A</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Mediatek</label>
+                </div>
 
                 4- Tamanho
 
@@ -270,7 +319,7 @@
 
                 9 - Preço
 
-                range duplo
+                <b>R$ 400</b> <input id="ex2" type="text" class="span2" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]" /> <b>R$6000</b>
 
                 10 - Agora, Nos diga seu e-mail
 
@@ -368,10 +417,11 @@
     <script src="frontend/js/jquery.easing.min.js"></script>
     <script src="frontend/js/jquery.scrollTo.js"></script>
     <script src="frontend/js/wow.min.js"></script>
+    <script src="questionario.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="frontend/js/custom.js"></script>
     <script src="frontend/contactform/contactform.js"></script>
-    <script src="frontend/js/questionario.js"></script>
+
 
 </body>
 
