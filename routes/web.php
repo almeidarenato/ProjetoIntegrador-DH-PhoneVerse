@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('frontend.landing');
 });
+
+Route::post('/respostas', 'QuestionarioController@capturar');
