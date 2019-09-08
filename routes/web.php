@@ -16,3 +16,7 @@ Route::get('/', function () {
 });
 
 Route::post('/respostas', 'QuestionarioController@capturar');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

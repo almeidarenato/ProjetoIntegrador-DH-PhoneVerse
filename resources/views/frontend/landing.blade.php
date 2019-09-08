@@ -51,7 +51,6 @@
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
-
     <!-- Preloader -->
     <div id="preloader">
         <div id="load"></div>
@@ -210,9 +209,11 @@
     </section>
     <!-- /Section: services -->
 
+@auth
+
+@endauth
     <div id="submitModal" class="multi-step">
-        <form>
-        </form>
+
     </div>
 
     <!-- iframe 1 -->

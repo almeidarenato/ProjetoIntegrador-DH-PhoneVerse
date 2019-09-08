@@ -237,3 +237,7 @@
 .flex-center ul li:last-of-type {
     margin-bottom: 0;
 }
+.modal-body {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
