@@ -1,16 +1,16 @@
 $(document).ready(function() {
-    $(".modal").MultiStep({
+    $("#esquerda").MultiStep({
         title: "Questionário",
         data: [
             {
                 content: `
-                <h5>Qual o seu nome?</h5>
+                <p>Qual o seu nome?</p>
                 <label for='nome'>Nome</label>
                 <input type="text" name='nome'  class="form-control" id="nomeUsuario" aria-describedby="emailHelp" placeholder="Fulano da Silva Sauro">`
             },
             {
                 content: `
-                <h5 id='teste'> Olá <b id='mostraNome'></b>, tudo bem? Nós somos a Phoneverse e estamos aqui para te ajudar a encontrar seu novo celular. </h5>
+                <p> Olá <b id='mostraNome'></b>, tudo bem? Nós somos a Phoneverse e estamos aqui para te ajudar a encontrar seu novo celular. </p>
                 `,
                 label: "Custom label"
             },
@@ -77,10 +77,191 @@ $(document).ready(function() {
             },
             {
                 content: `
+
+                <p>Pra terminar que tal fornecer um e-mail e senha? Assim já te cadastramos.</p>
                 <label for='nome'>E-mail:</label>
-                <input type="email" name='email' class="form-control" id="email" aria-describedby="emailHelp" placeholder="E-mail">
+                <input type="email" name='email' class="form-control" id="email" aria-describedby="emailHelp" placeholder="E-mail" autocomplete="username">
                 <label for='nome'>Crie uma senha:</label>
-                <input type="password" name='senha' class="form-control" id="senha" aria-describedby="emailHelp" placeholder="Senha">
+                <input type="password" name='senha' class="form-control" id="senha" aria-describedby="emailHelp" placeholder="Senha" autocomplete="new-password">
+                <input type="checkbox" class="custom-control-input" id="naoQuero" name="naoQuero">
+                <label class="custom-control-label" for="naoQuero">Não quero me cadastrar no momento</label>`
+            }
+        ],
+        //final: `<center><button class="btn btn-primary" type='submit'> Conferir meus Resultados </button></center>`,
+        final: `<center> Carregando Resultados </center>`,
+        modalSize: "lg"
+    });
+
+    $("#direita").MultiStep({
+        title: "Questionário",
+        data: [
+            {
+                content: `
+                <p>Qual o seu nome?</p>
+                <label for='nomeDireita'>Nome</label>
+                <input type="text" name='nome'  class="form-control" id="nomeUsuarioDireita" aria-describedby="emailHelp" placeholder="Fulano da Silva Sauro">`
+            },
+            {
+                content: `
+                <p> Olá <b id='mostraNomeDireita'></b>, tudo bem? Nós somos a Phoneverse e estamos aqui para te ajudar a encontrar seu novo celular. </p>
+                `,
+                label: "Custom label"
+            },
+            {
+                content: `<label >1 - Qual sua Data de Nascimento?</label>
+                    <input type="date" name='dtNascimento' class="form-control" id="dtNascimento" aria-describedby="emailHelp" placeholder="29">
+                    `
+            },
+            {
+                content: `
+                <div class="form-group">
+                <label>2 - Por quais marcas você tem mais preferência?</label>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="selecionar" id="marcaMotorola">
+                    <label class="custom-control-label" for="marcaMotorola">Motorola</label>
+                </div>
+                 <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="selecionar" id="marcaApple">
+                    <label class="custom-control-label" for="marcaApple">Apple</label>
+                 </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="selecionar" id="marcaSamsung">
+                    <label class="custom-control-label" for="marcaSamsung">Samsung</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="selecionar" id="marcaXiaomi">
+                    <label class="custom-control-label" for="marcaXiaomi">Xiaomi</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="selecionar" id="marcaLG">
+                    <label class="custom-control-label" for="marcaLG">LG</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="selecionar" id="marcaAsus">
+                    <label class="custom-control-label" for="marcaAsus">Asus</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="selecionar" id="marcaGoogle">
+                    <label class="custom-control-label" for="marcaGoogle">Google Pixel</label>
+                </div>
+            </div>`
+            },
+            {
+                content: `
+                <div class="form-group">
+                <label>3 - Quais versões de IOS/ Android você busca (no mínimo).</label>
+                <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="selecionar" id="versaoIos12" >
+                                <label class="custom-control-label" for="versaoIos12">iOs 12</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="selecionar" id="versaoAndroid7" >
+                                <label class="custom-control-label" for="versaoAndroid7">Android 7</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="selecionar" id="versaoAndroid8" >
+                                <label class="custom-control-label" for="versaoAndroid8">Android 8</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="selecionar" id="versaoAndroid9" >
+                                <label class="custom-control-label" for="versaoAndroid9">Android 9</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="selecionar" id="versaoAndroid10" >
+                                <label class="custom-control-label" for="versaoAndroid10">Android 10</label>
+                            </div>
+                </div>`
+            },
+            {
+                content: `<div class="form-group">
+                <label>4 - Nos diga qual sua preferencia por Processador</label>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="selecionar" id="procApple" class='selecionar'>
+                    <label class="custom-control-label" for="procApple">Apple A series</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="selecionar" id="procKirin" class='selecionar'>
+                <label class="custom-control-label" for="procKirin">HiSilicon Kirin</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="selecionar" id="procSnapdragon" class='selecionar'>
+                    <label class="custom-control-label" for="procSnapdragon">Qualcomm Snapdragon</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="selecionar" id="procMediaTek" class='selecionar'>
+                    <label class="custom-control-label" for="procMediaTek">Mediatek Helio</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="selecionar" id="procExynos" class='selecionar'>
+                <label class="custom-control-label" for="procExynos">Samsung Exynos</label>
+            </div>
+            </div>`
+            },
+            {
+                content: `
+                <h5>5 - Caracteristicas</h5>
+                <div class="form-group">
+                <p>
+                <label for='tamanho'>5.1 - Tamanho de Tela (em polegadas):</label>
+                    <input type="text" id="tamanho" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                </p>
+                    <div id="tamanho-range"></div>
+
+                <br>
+                <p>
+                    <label for='bateria'>5.2 - Tamanho de Bateria (em miliampere):</label>
+                    <input type="text" id="bateria" size="30" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                </p>
+                    <div id="bateria-range"></div>
+                <br>
+                <p>
+                    <label for='camera'>5.3 - Camera (em megapixel):</label>
+                    <input type="text" id="camera" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                </p>
+                    <div id="camera-range"></div>
+                <br>
+                <p>
+                    <label for='camera'>5.4 - Preço (em R$):</label>
+                    <input type="text" id="preco" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                </p>
+                    <div id="preco-range"></div>
+                <br>
+                <label for='memoriaInterna'>5.5 Memória Interna:</label>
+                    <fieldset id='memoriaInterna'>
+                        <label for="memoriaInterna-1">16 GB ou menos</label>
+                        <input type="radio" name="memoriaInterna" id="memoriaInterna-1" class='selecionar'>
+                        <label for="memoriaInterna-2">32 GB</label>
+                        <input type="radio" name="memoriaInterna" id="memoriaInterna-2" class='selecionar'>
+                        <label for="memoriaInterna-3">64 GB</label>
+                        <input type="radio" name="memoriaInterna" id="memoriaInterna-3" class='selecionar'>
+                        <label for="memoriaInterna-4">128 GB ou Mais</label>
+                        <input type="radio" name="memoriaInterna" id="memoriaInterna-4" class='selecionar'>
+                    </fieldset>
+                    <br>
+                <label for='memoriaInterna'>5.6 Memória Ram:</label>
+                    <fieldset id='memoriaRam'>
+                        <label for="memoriaRam-1">1 GB ou menos</label>
+                        <input type="radio" name="memoriaRam" id="memoriaRam-1" class='selecionar'>
+                        <label for="memoriaRam-2">2 GB</label>
+                        <input type="radio" name="memoriaRam" id="memoriaRam-2" class='selecionar'>
+                        <label for="memoriaRam-3">3 GB</label>
+                        <input type="radio" name="memoriaRam" id="memoriaRam-3" class='selecionar'>
+                        <label for="memoriaRam-4">4 GB ou Mais</label>
+                        <input type="radio" name="memoriaRam" id="memoriaRam-4" class='selecionar'>
+                    </fieldset>
+
+                </div>
+
+                `
+            },
+            {
+                content: `
+
+                <p>Pra terminar que tal fornecer um e-mail e senha? Assim já te cadastramos.</p>
+                <label for='nome'>E-mail:</label>
+                <input type="email" name='email' class="form-control" id="email" aria-describedby="emailHelp" placeholder="E-mail" autocomplete="username">
+                <label for='nome'>Crie uma senha:</label>
+                <input type="password" name='senha' class="form-control" id="senha" aria-describedby="emailHelp" placeholder="Senha" autocomplete="new-password">
                 <input type="checkbox" class="custom-control-input" id="naoQuero" name="naoQuero">
                 <label class="custom-control-label" for="naoQuero">Não quero me cadastrar no momento</label>`
             }
