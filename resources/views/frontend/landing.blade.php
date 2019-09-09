@@ -326,6 +326,39 @@
     </div>
 <!--/ Questionario - Eu me viro -->
 
+<!-- Modal - Caso encontre erros no preenchimento -->
+
+@if ($errors->any())
+<script type="text/javascript">
+    $(window).on('load',function(){
+        $('#listarErros').modal('show');
+    });
+</script>
+<div class="modal fade" id="listarErros" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <a class="close" data-dismiss="modal">×</a>
+            <h3>Ops... alguma coisa deu errado</h3>
+            </div>
+            <div class="modal-body">
+                    <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                        <a href="#" class="close" data-dismiss="modal" aria-label="close">Fechar</a>
+                </div>
+            </div>
+        </div>
+</div>
+@endif
+
+<!-- / Modal - Caso encontre erros no preenchimento -->
 </div>
 
     <!-- Section: contact -->
@@ -418,6 +451,7 @@
     <script src="frontend/js/custom.js"></script>
     <script src="frontend/contactform/contactform.js"></script>
 
+    <!-- Recursos para o Questionario-Modal -->
     <script type="text/javascript" src="/js/MultiStep.min.js"></script>
     <script type="text/javascript" src="/js/questionario.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>

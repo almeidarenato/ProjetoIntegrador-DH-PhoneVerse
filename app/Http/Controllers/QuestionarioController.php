@@ -9,10 +9,11 @@ use App\User;
 
 class QuestionarioController extends Controller
 {
-    public function capturar(Request $request)
+
+    public function cadastrar(Request $request)
     {
         //var_dump($request->input('dtNascimento'));
-        $date =  $request->input('dtNascimento');
+
         //echo $date;
         //exit;
         //var_dump($date);
@@ -23,7 +24,7 @@ class QuestionarioController extends Controller
         if (isset($naoquero)) {
             $respostas = [
                 'nome' => $request->input('nome'),
-                'dtNascimento' => $date,
+                'dtNascimento' => $request->input('dtNascimento'),
                 'aparelho' => $request->input('aparelho'),
                 'motivo' => $request->input('resp3'),
                 'usoCelular' => $request->input('resp4')
@@ -32,12 +33,27 @@ class QuestionarioController extends Controller
                 'nome' => $request->input('nome'),
                 'email' => $request->input('email'),
                 'senha' => $request->input('senha'),
-                'dtNascimento' => $date,
+                'dtNascimento' => $request->input('dtNascimento'),
                 'aparelho' => $request->input('aparelho'),
                 'motivo' => $request->input('resp3'),
                 'usoCelular' => $request->input('resp4')
             ]);
         } else {
+
+            $request->validate([
+                'email' => 'required|unique:users',
+                'senha' => 'required',
+                'dtNascimento' => 'required'
+            ]);
+            //$email = $request->input('email');
+            // $verifica = User::whereEmail($email)->get();
+
+            /* if (isset($verifica[0]->email)) {
+                echo "seu e-mail já está cadastrado";
+            } else {
+                echo "oba seu email é novo";
+                exit;
+                */
             $respostas = [
                 'nome' => $request->input('nome'),
                 'email' => $request->input('email'),
@@ -56,6 +72,7 @@ class QuestionarioController extends Controller
                 'motivo' => $request->input('resp3'),
                 'usoCelular' => $request->input('resp4')
             ]);
+            /*}*/
         }
         //echo $respostas['email'];
         //var_dump($respostas);

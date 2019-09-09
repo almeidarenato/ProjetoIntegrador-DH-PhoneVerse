@@ -4,13 +4,18 @@ $(document).ready(function() {
         data: [
             {
                 content: `
+                <div class="form-group">
                 <p>Qual o seu nome?</p>
                 <label for='nome'>Nome</label>
-                <input type="text" name='nome'  class="form-control" id="nomeUsuario" aria-describedby="emailHelp" placeholder="Fulano da Silva Sauro">`
+                <input type="text" name='nome'  class="form-control" id="nomeUsuario" aria-describedby="emailHelp" placeholder="Fulano da Silva Sauro" >
+                </div>
+                `
             },
             {
                 content: `
+
                 <p> Olá <b id='mostraNome'></b>, tudo bem? Nós somos a Phoneverse e estamos aqui para te ajudar a encontrar seu novo celular. </p>
+
                 `,
                 label: "Custom label"
             },
@@ -21,7 +26,7 @@ $(document).ready(function() {
             },
             {
                 content: `<label for='nome'>2 - Qual seu aparelho atual?</label>
-                    <input type="text" name='aparelho' class="form-control" id="nome" aria-describedby="emailHelp" placeholder="Semsun Pad X">
+                    <input type="text" name='aparelho' class="form-control" id="nome" aria-describedby="emailHelp" placeholder="Semsun Pad X" required />
                     `
             },
             {
