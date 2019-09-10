@@ -39,11 +39,11 @@ return [
     'digits_between' => 'The :attribute must be between :min and :max digits.',
     'dimensions' => 'The :attribute has invalid image dimensions.',
     'distinct' => 'The :attribute field has a duplicate value.',
-    'email' => 'The :attribute must be a valid email address.',
+    'email' => 'O e-mail informado não é válido',
     'ends_with' => 'The :attribute must end with one of the following: :values',
     'exists' => 'The selected :attribute is invalid.',
     'file' => 'The :attribute must be a file.',
-    'filled' => 'The :attribute field must have a value.',
+    'filled' => 'O campo precisa estar preenchido',
     'gt' => [
         'numeric' => 'The :attribute must be greater than :value.',
         'file' => 'The :attribute must be greater than :value kilobytes.',
@@ -95,7 +95,7 @@ return [
     'numeric' => 'The :attribute must be a number.',
     'present' => 'The :attribute field must be present.',
     'regex' => 'The :attribute format is invalid.',
-    'required' => 'The :attribute field is required.',
+    'required' => 'O campo :attribute field é obrigatório.',
     'required_if' => 'The :attribute field is required when :other is :value.',
     'required_unless' => 'The :attribute field is required unless :other is in :values.',
     'required_with' => 'The :attribute field is required when :values is present.',
@@ -129,8 +129,12 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'dtNascimento' => [
+            'required' => 'Precisamos da sua data de Nascimento para o cadastro'
+        ],
+        'email' => [
+            'required' => 'Nós precisamos do seu e-mail',
+            'unique' => 'Parece que seu e-mail já está cadastrado no nosso site, por favor se logue'
         ],
     ],
 

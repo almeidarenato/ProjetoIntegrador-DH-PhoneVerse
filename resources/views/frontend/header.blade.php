@@ -5,7 +5,7 @@
                 <i class="fa fa-bars"></i>
             </button>
             <a class="navbar-brand" href="#">
-                <img src="frontend/img/logo.png" alt="" srcset="" class='logo'>
+                <img src="/img/logo.png" alt="" srcset="" class='logo'>
             </a>
         </div>
 
@@ -17,11 +17,8 @@
                 <li><a href="#service">Seu Smartphone</a></li>
                 <li><a href="#contact">Contato</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Meu Cadastro<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Meus Dados</a></li>
-                        <li><a href="#">Meus favoritos</a></li>
-                    </ul>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Login</a>
+
                 </li>
             </ul>
         </div>

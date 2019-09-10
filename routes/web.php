@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('frontend.landing');
 });
+
+Route::post('/respostas', 'QuestionarioController@cadastrar');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
