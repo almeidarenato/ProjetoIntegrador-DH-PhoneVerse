@@ -5,7 +5,7 @@
                 <i class="fa fa-bars"></i>
             </button>
             <a class="navbar-brand" href="#">
-                <img src="frontend/img/logo.png" alt="" srcset="" class='logo'>
+                <img src="/img/logo.png" alt="" srcset="" class='logo'>
             </a>
         </div>
 

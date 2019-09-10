@@ -5,6 +5,7 @@ $(document).ready(function() {
             {
                 content: `
                 <div class="form-group">
+                <input type='hidden' class="opcaoUsuario" value='' name='opcaousuario'>
                 <p>Qual o seu nome?</p>
                 <label for='nome'>Nome</label>
                 <input type="text" name='nome'  class="form-control" id="nomeUsuario" aria-describedby="emailHelp" placeholder="Fulano da Silva Sauro" >
@@ -26,7 +27,7 @@ $(document).ready(function() {
             },
             {
                 content: `<label for='nome'>2 - Qual seu aparelho atual?</label>
-                    <input type="text" name='aparelho' class="form-control" id="nome" aria-describedby="emailHelp" placeholder="Semsun Pad X" required />
+                    <input type="text" name='aparelho' class="form-control" id="nome" aria-describedby="emailHelp" placeholder="Semsun Pad X" />
                     `
             },
             {
@@ -102,9 +103,10 @@ $(document).ready(function() {
         data: [
             {
                 content: `
+                <input type='hidden' class="opcaoUsuario" value='' name='opcaousuario'>
                 <p>Qual o seu nome?</p>
                 <label for='nomeDireita'>Nome</label>
-                <input type="text" name='nome'  class="form-control" id="nomeUsuarioDireita" aria-describedby="emailHelp" placeholder="Fulano da Silva Sauro">`
+                <input type="text" name='nomeDireita'  class="form-control" id="nomeUsuarioDireita" aria-describedby="emailHelp" placeholder="Fulano da Silva Sauro">`
             },
             {
                 content: `
@@ -114,7 +116,7 @@ $(document).ready(function() {
             },
             {
                 content: `<label >1 - Qual sua Data de Nascimento?</label>
-                    <input type="date" name='dtNascimento' class="form-control" id="dtNascimento" aria-describedby="emailHelp" placeholder="29">
+                    <input type="date" name='dtNascimentoDireita' class="form-control" id="dtNascimento" aria-describedby="emailHelp" placeholder="29">
                     `
             },
             {
@@ -122,32 +124,32 @@ $(document).ready(function() {
                 <div class="form-group">
                 <label>2 - Por quais marcas você tem mais preferência?</label>
                 <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="selecionar" id="marcaMotorola">
+                    <input type="checkbox" class="selecionar" id="marcaMotorola"  name='marcaMotorola'>
                     <label class="custom-control-label" for="marcaMotorola">Motorola</label>
                 </div>
                  <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="selecionar" id="marcaApple">
+                    <input type="checkbox" class="selecionar" id="marcaApple" name='marcaApple'>
                     <label class="custom-control-label" for="marcaApple">Apple</label>
                  </div>
                 <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="selecionar" id="marcaSamsung">
+                    <input type="checkbox" class="selecionar" id="marcaSamsung" name='marcaSamsung'>
                     <label class="custom-control-label" for="marcaSamsung">Samsung</label>
                 </div>
                 <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="selecionar" id="marcaXiaomi">
+                    <input type="checkbox" class="selecionar" id="marcaXiaomi" name='marcaXiaomi'>
                     <label class="custom-control-label" for="marcaXiaomi">Xiaomi</label>
                 </div>
                 <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="selecionar" id="marcaLG">
+                    <input type="checkbox" class="selecionar" id="marcaLG" name='marcaLG'>
                     <label class="custom-control-label" for="marcaLG">LG</label>
                 </div>
                 <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="selecionar" id="marcaAsus">
+                    <input type="checkbox" class="selecionar" id="marcaAsus" name='marcaAsus'>
                     <label class="custom-control-label" for="marcaAsus">Asus</label>
                 </div>
                 <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="selecionar" id="marcaGoogle">
-                    <label class="custom-control-label" for="marcaGoogle">Google Pixel</label>
+                    <input type="checkbox" class="selecionar" id="marcaAsus" name='marcaGoogle'>
+                    <label class="custom-control-label" for="marcaGoogle">Asus</label>
                 </div>
             </div>`
             },
@@ -156,25 +158,25 @@ $(document).ready(function() {
                 <div class="form-group">
                 <label>3 - Quais versões de IOS/ Android você busca (no mínimo).</label>
                 <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="selecionar" id="versaoIos12" >
-                                <label class="custom-control-label" for="versaoIos12">iOs 12</label>
-                            </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="selecionar" id="versaoAndroid7" >
-                                <label class="custom-control-label" for="versaoAndroid7">Android 7</label>
-                            </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="selecionar" id="versaoAndroid8" >
-                                <label class="custom-control-label" for="versaoAndroid8">Android 8</label>
-                            </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="selecionar" id="versaoAndroid9" >
-                                <label class="custom-control-label" for="versaoAndroid9">Android 9</label>
-                            </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="selecionar" id="versaoAndroid10" >
-                                <label class="custom-control-label" for="versaoAndroid10">Android 10</label>
-                            </div>
+                    <input type="checkbox" class="selecionar" id="versaoIos12" >
+                    <label class="custom-control-label" for="versaoIos12">iOs 12</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="selecionar" id="versaoAndroid7" >
+                    <label class="custom-control-label" for="versaoAndroid7">Android 7</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="selecionar" id="versaoAndroid8" >
+                    <label class="custom-control-label" for="versaoAndroid8">Android 8</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="selecionar" id="versaoAndroid9" >
+                    <label class="custom-control-label" for="versaoAndroid9">Android 9</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="selecionar" id="versaoAndroid10" >
+                    <label class="custom-control-label" for="versaoAndroid10">Android 10</label>
+                </div>
                 </div>`
             },
             {
