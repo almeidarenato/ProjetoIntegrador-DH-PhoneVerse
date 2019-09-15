@@ -22,9 +22,35 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
             $table->date('dtNascimento');
-            $table->string('aparelho');
-            $table->string('motivo');
-            $table->string('usoCelular');
+            $table->string('aparelho')->nullable();
+            $table->string('motivo')->nullable();
+            $table->string('usoCelular')->nullable();
+            $table->boolean('marcaApple')->default(false);
+            $table->boolean('marcaMotorola')->default(false);
+            $table->boolean('marcaSamsung')->default(false);
+            $table->boolean('marcaXiaomi')->default(false);
+            $table->boolean('marcaAsus')->default(false);
+            $table->boolean('marcaLG')->default(false);
+            $table->boolean('versaoIos12')->default(false);
+            $table->boolean('versaoAndroid7')->default(false);
+            $table->boolean('versaoAndroid8')->default(false);
+            $table->boolean('versaoAndroid9')->default(false);
+            $table->boolean('versaoAndroid10')->default(false);
+            $table->boolean('procApple')->default(false);
+            $table->boolean('procKirin')->default(false);
+            $table->boolean('procSnapdragon')->default(false);
+            $table->boolean('procMediaTek')->default(false);
+            $table->boolean('procExynos')->default(false);
+            $table->double('tamanhoTelaDe', 8, 2)->nullable();
+            $table->double('tamanhoTelaAte', 8, 2)->nullable();
+            $table->integer('bateriaDe')->nullable();
+            $table->integer('bateriaAte')->nullable();
+            $table->integer('cameraDe')->nullable();
+            $table->integer('cameraAte')->nullable();
+            $table->double('precoDe', 8, 2)->nullable();
+            $table->integer('precoAte')->nullable();
+            $table->integer('memoriaInterna')->nullable();
+            $table->integer('memoriaRam')->nullable();
         });
     }
 

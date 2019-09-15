@@ -73,16 +73,17 @@ class QuestionarioController extends Controller
             if ($request->has('naoQuero')) {
                 $respostas = [
                     // Usuario
-                    'nome' => $request->input('nomeDireita'),
+                    'name' => $request->input('nomeDireita'),
                     'email' => $request->input('emailDireita'),
-                    'senha' => $request->input('senhaDireita'),
+                    'password' => Hash::make($request->input('senhaDireita')),
                     'dtNascimento' => $request->input('dtNascimentoDireita'),
                     //Opcao de Marcas
                     'marcaApple' => $request->has('marcaApple'),
                     'marcaMotorola' => $request->has('marcaMotorola'),
                     'marcaSamsung' => $request->has('marcaSamsung'),
                     'marcaXiaomi' => $request->has('marcaXiaomi'),
-                    'marcaLG' => $request->has('marcaAsus'),
+                    'marcaLG' => $request->has('marcaLG'),
+                    'marcaAsus' => $request->has('marcaAsus'),
                     //Opcao de Versao
                     'versaoIos12' => $request->has('marcaAsus'),
                     'versaoAndroid7' => $request->has('versaoAndroid7'),
@@ -113,9 +114,9 @@ class QuestionarioController extends Controller
             } else {
                 $respostas = [
                     // Usuario
-                    'nome' => $request->input('nomeDireita'),
+                    'name' => $request->input('nomeDireita'),
                     'email' => $request->input('emailDireita'),
-                    'senha' => $request->input('senhaDireita'),
+                    'password' => Hash::make($request->input('senhaDireita')),
                     'dtNascimento' => $request->input('dtNascimentoDireita'),
                     //Opcao de Marcas
                     'marcaApple' => $request->has('marcaApple'),
@@ -124,7 +125,7 @@ class QuestionarioController extends Controller
                     'marcaXiaomi' => $request->has('marcaXiaomi'),
                     'marcaLG' => $request->has('marcaAsus'),
                     //Opcao de Versao
-                    'versaoIos12' => $request->has('versaoIos12='),
+                    'versaoIos12' => $request->has('versaoIos12'),
                     'versaoAndroid7' => $request->has('versaoAndroid7'),
                     'versaoAndroid8' => $request->has('versaoAndroid8'),
                     'versaoAndroid9' => $request->has('versaoAndroid9'),
@@ -151,9 +152,9 @@ class QuestionarioController extends Controller
 
                 $user = User::create([
                     // Usuario
-                    'nome' => $request->input('nomeDireita'),
+                    'name' => $request->input('nomeDireita'),
                     'email' => $request->input('emailDireita'),
-                    'senha' => $request->input('senhaDireita'),
+                    'password' => Hash::make($request->input('senhaDireita')),
                     'dtNascimento' => $request->input('dtNascimentoDireita'),
                     //Opcao de Marcas
                     'marcaApple' => $request->has('marcaApple'),
