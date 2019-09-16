@@ -246,6 +246,8 @@
             values:[4.5,6.5],
             slide: function( event, ui ) {
               $( "#tamanho" ).val( "de " + ui.values[ 0 ] + "″  até " + ui.values[ 1 ] + "″ " );
+              $('#tamanhoTelaDe').val( ui.values[ 0 ]);
+              $('#tamanhoTelaAte').val(ui.values[ 1 ]);
             },
             create: function(event,ui){
                 ui.values[0] = 4.5;
@@ -254,6 +256,8 @@
           });
           $( "#tamanho" ).val( "" + $( "#tamanho-range" ).slider( "values", 0 ) +
             "″  até " + $( "#tamanho-range" ).slider( "values", 1 )+ "″ ");
+            $('#tamanhoTelaDe').val($( "#tamanho-range" ).slider( "values", 0 ));
+            $('#tamanhoTelaAte').val($( "#tamanho-range" ).slider( "values", 1 ));
         });
         </script>
 <!--/ Configuração do Range de Tamanho -->
@@ -268,6 +272,8 @@
              values:[1500, 4000],
              slide: function( event, ui ) {
                $( "#bateria" ).val( "de " + ui.values[ 0 ] + "mAh  até " + ui.values[ 1 ] + "mAh " );
+               $('#bateriaDe').val(ui.values[ 0 ]);
+              $('#bateriaAte').val(ui.values[ 1 ]);
              },
              create: function(event,ui){
                 ui.values[0] = 1500;
@@ -290,6 +296,8 @@
              values:[1500, 4000],
              slide: function( event, ui ) {
                $( "#preco" ).val( "de " + ui.values[ 0 ] + "R$  até " + ui.values[ 1 ] + "R$ " );
+               $('#precoDe').val(ui.values[ 0 ]);
+              $('#precoAte').val(ui.values[ 1 ]);
              },
              create: function(event,ui){
                 ui.values[0] = 1500;
@@ -312,6 +320,8 @@
              values:[10, 30],
              slide: function( event, ui ) {
                $( "#camera" ).val( "de " + ui.values[ 0 ] + "MP  até " + ui.values[ 1 ] + "MP " );
+               $('#cameraDe').val(ui.values[ 0 ]);
+              $('#cameraAte').val(ui.values[ 1 ]);
              },
              create: function(event,ui){
                 ui.values[0] = 10;
@@ -452,7 +462,31 @@
     <!-- /Section: contact -->
 
 
-    @include('frontend.footer')
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-12">
+                    <div class="wow shake" data-wow-delay="0.4s">
+                        <div class="page-scroll marginbot-30">
+                            <a href="#intro" id="totop" class="btn btn-circle">
+                                <i class="fa fa-angle-double-up animated"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p>&copy;PhoneVerse.</p>
+                    <div class="credits">
+                        <!--
+                  All the links in the footer should remain intact.
+                  You can delete the links only if you purchased the pro version.
+                  Licensing information: https://bootstrapmade.com/license/
+                  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Squadfree
+                -->
+                        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
     <!-- Core JavaScript Files -->

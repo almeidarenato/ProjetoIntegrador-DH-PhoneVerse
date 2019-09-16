@@ -16,7 +16,11 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'dtNascimento', 'aparelho', 'motivo', 'usoCelular'
+        'name', 'email', 'password', 'dtNascimento', 'aparelho', 'motivo', 'usoCelular',
+        'marcaApple', 'marcaMotorola', 'marcaSamsung', 'marcaXiaomi', 'marcaLG', 'marcaAsus',
+        'versaoIos12', 'versaoAndroid7', 'versaoAndroid8', 'versaoAndroid9', 'versaoAndroid10',
+        'procApple', 'procKirin', 'procSnapdragon', 'procMediaTek', 'procExynos', 'tamanhoTelaDe',
+        'tamanhoTelaAte', 'bateriaDe', 'bateriaAte', 'cameraDe', 'cameraAte', 'precoDe', 'precoAte', 'memoriaInterna', 'memoriaRam'
     ];
 
     /**
