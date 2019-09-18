@@ -16,7 +16,7 @@ class CreateMemoriaInternasTable extends Migration
         Schema::create('memoria_interna', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
-            $table->double('quantidade')->nullable(false);
+            $table->decimal('quantidade', 8, 2)->nullable(false);
         });
     }
 

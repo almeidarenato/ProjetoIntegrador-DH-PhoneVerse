@@ -16,7 +16,7 @@ class CreateMemoriaRamsTable extends Migration
         Schema::create('memoria_ram', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
-            $table->double('quantidade')->nullable(false);
+            $table->decimal('quantidade', 8, 2)->nullable(false);
         });
     }
 

@@ -8,7 +8,7 @@ class Marca extends Model
 {
     protected $table = "marcas"; //referencia a tabela que já existe
     protected $primaryKey = "id";
-    protected $fillable = ['descricao'];
+    protected $fillable = ['nome'];
 
     public function aparelhos()
     {

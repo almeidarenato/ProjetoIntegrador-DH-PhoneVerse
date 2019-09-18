@@ -16,6 +16,8 @@ class CreateProcessadorsTable extends Migration
         Schema::create('processadores', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
+            $table->string('modelo')->nullable(false);
+            $table->string('marca')->nullable(false);
         });
     }
 
