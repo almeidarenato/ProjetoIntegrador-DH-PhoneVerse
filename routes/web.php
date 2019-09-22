@@ -29,6 +29,16 @@ Route::get('/admin', function () {
     return view('admin.main');
 });
 
-Route::get('/admin/marcas', function () {
-    return view('admin.marcas');
-});
+// CRUD Marcas
+Route::get('/admin/marcas', 'marcaController@listandoMarcas');
+Route::get('/admin/marcas/{salvo}', 'marcaController@listandoMarcas');
+Route::post('/admin/marcas/adicionar', 'marcaController@salvandoMarca');
+Route::post('/admin/marcas/alterar/{id}', 'marcaController@modificandoMarca');
+Route::delete('/admin/marcas/excluir/{id}', 'marcaController@removendoMarca');
+
+// CRUD Memoria Interna
+Route::get('/admin/memint', 'memoriaInternaController@listandoMemoriaInterna');
+Route::get('/admin/memint/{salvo}', 'memoriaInternaController@listandoMemoriaInterna');
+Route::post('/admin/memint/adicionar', 'memoriaInternaController@salvandoMemoriaInterna');
+Route::post('/admin/memint/alterar/{id}', 'memoriaInternaController@modificandoMemoriaInterna');
+Route::delete('/admin/memint/excluir/{id}', 'memoriaInternaController@removendoMemoriaInterna');
