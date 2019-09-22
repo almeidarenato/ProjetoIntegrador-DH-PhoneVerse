@@ -43,7 +43,7 @@ class processadorController extends Controller
         return view('adicionandoProcessador')->with('processador', $processador);
     }
 
-    public function modeificandoProcessador(Request $request, $id)
+    public function modificandoProcessador(Request $request, $id)
     {
         $processador = Processador::find($id);
 

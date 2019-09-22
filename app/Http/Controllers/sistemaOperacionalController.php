@@ -7,60 +7,66 @@ use App\SistemaOperacional;
 
 class sistemaOperacionalController extends Controller
 {
-    public function listandoSistemasOperacionais(){
-        $sistemasOperacionais = SistemaOperacional::all();
+    public function listandoSistemasOperacionais()
+    {
+        $sistemasOperacionais = SistemaOperacional::orderBy('id', 'ASC')->paginate(5);
 
-        return view('listandoSistemasOperacionais')
+        return view('admin.sistemaoperacional')
             ->with('sistemasOperacionais', $sistemasOperacionais);
     }
 
-    public function adicionandoSistemaOperacional(){
+    public function adicionandoSistemaOperacional()
+    {
         return view('adicionandoSistemaOperacional');
     }
 
-    public function salvandoSistemaOperacional(Request $request){
+    public function salvandoSistemaOperacional(Request $request)
+    {
         $request->validate([
-            "marca" => "required|max:50",
+            "nome" => "required|max:50",
             "versao" => "required|max:50"
         ]);
 
         $sistemaOperacional = SistemaOperacional::create([
-            "marca" => $request->input('marca'),
+            "nome" => $request->input('nome'),
             "versao" => $request->input('versao')
         ]);
 
         $sistemaOperacional->save();
 
-        return redirect('/sistemaOperacional');
+        return redirect('/admin/sisop/salvo');
     }
-    public function alterandoSistemaOperacional($id){
+    public function alterandoSistemaOperacional($id)
+    {
         $sistemaOperacional = SistemaOperacional::find($id);
 
         return view('adicionandoSistemaOperacional')->with('sistemaOperacional', $sistemaOperacional);
     }
 
-    public function modificandoSistemaOperacional(Request $request, $id){
+    public function modificandoSistemaOperacional(Request $request, $id)
+    {
         $sistemaOperacional = SistemaOperacional::find($id);
 
         $request->validate([
-            "marca" => "required|max:50",
+            "nome" => "required|max:50",
             "versao" => "required|max:200"
         ]);
 
-        $sistemaOperacional->marca = $request->input('marca');
+        $sistemaOperacional->nome = $request->input('nome');
 
         $sistemaOperacional->versao = $request->input('versao');
 
         $sistemaOperacional->save();
 
-        return redirect('/sistemaOperacional');
+        return redirect('/admin/sisop/editado');
     }
 
-    public function removendoSistemaOperacional($id){
+    public function removendoSistemaOperacional($id)
+    {
         $sistemaOperacional = SistemaOperacional::find($id);
 
         $sistemaOperacional->delete();
 
-        return redirect('/sistemaOperacional');
+        return redirect('/admin/sisop/excluido');
     }
 }

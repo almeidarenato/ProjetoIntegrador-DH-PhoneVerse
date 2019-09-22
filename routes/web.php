@@ -61,5 +61,12 @@ Route::delete('/admin/slotsim/excluir/{id}', 'slotSimController@removendoslotSim
 Route::get('/admin/processador', 'processadorController@listandoProcessador');
 Route::get('/admin/processador/{salvo}', 'processadorController@listandoProcessador');
 Route::post('/admin/processador/adicionar', 'processadorController@salvandoProcessador');
-Route::post('/admin/processador/alterar/{id}', 'processadorController@modeificandoProcessador');
+Route::post('/admin/processador/alterar/{id}', 'processadorController@modificandoProcessador');
 Route::delete('/admin/processador/excluir/{id}', 'processadorController@removendoProcessador');
+
+// CRUD Sistema Operacional
+Route::get('/admin/sisop', 'sistemaOperacionalController@listandoSistemasOperacionais');
+Route::get('/admin/sisop/{salvo}', 'sistemaOperacionalController@listandoSistemasOperacionais');
+Route::post('/admin/sisop/adicionar', 'sistemaOperacionalController@salvandoSistemaOperacional');
+Route::post('/admin/sisop/alterar/{id}', 'sistemaOperacionalController@modificandoSistemaOperacional');
+Route::delete('/admin/sisop/excluir/{id}', 'sistemaOperacionalController@removendoSistemaOperacional');
