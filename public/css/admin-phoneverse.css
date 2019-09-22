@@ -1,0 +1,35 @@
+body,
+html,
+.container-fluid {
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100vh;
+    max-height: 100%;
+}
+
+main {
+    max-height: 100%;
+    overflow-y: auto;
+}
+aside.bg-purple {
+    background-color: #4c174c !important;
+}
+nav.bg-purple {
+    background-color: #4c174c !important;
+}
+
+.logo {
+    width: 150px;
+    margin-top: -15px;
+}
+
+@media screen and (max-width: 574px) {
+    aside {
+        height: 50px;
+    }
+    main {
+        height: 100vw;
+    }
+}
