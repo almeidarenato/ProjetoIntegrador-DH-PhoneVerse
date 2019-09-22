@@ -42,3 +42,10 @@ Route::get('/admin/memint/{salvo}', 'memoriaInternaController@listandoMemoriaInt
 Route::post('/admin/memint/adicionar', 'memoriaInternaController@salvandoMemoriaInterna');
 Route::post('/admin/memint/alterar/{id}', 'memoriaInternaController@modificandoMemoriaInterna');
 Route::delete('/admin/memint/excluir/{id}', 'memoriaInternaController@removendoMemoriaInterna');
+
+// CRUD Memoria Ram
+Route::get('/admin/memram', 'memoriaRamController@listandoMemoriaRam');
+Route::get('/admin/memram/{salvo}', 'memoriaRamController@listandoMemoriaRam');
+Route::post('/admin/memram/adicionar', 'memoriaRamController@salvandoMemoriaRam');
+Route::post('/admin/memram/alterar/{id}', 'memoriaRamController@modificandoMemoriaRam');
+Route::delete('/admin/memram/excluir/{id}', 'memoriaRamController@removendoMemoriaRam');
