@@ -56,3 +56,10 @@ Route::get('/admin/slotsim/{salvo}', 'slotSimController@listandoslotSim');
 Route::post('/admin/slotsim/adicionar', 'slotSimController@salvandoslotSim');
 Route::post('/admin/slotsim/alterar/{id}', 'slotSimController@modificandoslotSim');
 Route::delete('/admin/slotsim/excluir/{id}', 'slotSimController@removendoslotSim');
+
+// CRUD Processador
+Route::get('/admin/processador', 'processadorController@listandoProcessador');
+Route::get('/admin/processador/{salvo}', 'processadorController@listandoProcessador');
+Route::post('/admin/processador/adicionar', 'processadorController@salvandoProcessador');
+Route::post('/admin/processador/alterar/{id}', 'processadorController@modeificandoProcessador');
+Route::delete('/admin/processador/excluir/{id}', 'processadorController@removendoProcessador');
