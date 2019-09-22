@@ -9,9 +9,9 @@ class slotSimController extends Controller
 {
     public function listandoSlotSim()
     {
-        $slotSim = SlotSim::all();
+        $slotSim = SlotSim::orderBy('id', 'ASC')->paginate(5);
 
-        return view('listandoSlotSim')
+        return view('admin.slotsim')
             ->with('slotSim', $slotSim);
     }
 
@@ -32,15 +32,17 @@ class slotSimController extends Controller
 
         $slotSim->save();
 
-        return redirect('/listandoSlotSim');
+        return redirect('/admin/slotsim/salvo');
     }
-    public function alterandoSlotSim($id){
+    public function alterandoSlotSim($id)
+    {
         $slotSim = SlotSim::find($id);
 
         return view('adicionandoSlotSim')->with('slotSim', $slotSim);
     }
 
-    public function modificandoSlotSim(Request $request, $id){
+    public function modificandoSlotSim(Request $request, $id)
+    {
         $slotSim = SlotSim::find($id);
 
         $request->validate([
@@ -51,14 +53,15 @@ class slotSimController extends Controller
 
         $slotSim->save();
 
-        return redirect('/slotSim');
+        return redirect('/admin/slotsim/editado');
     }
 
-    public function removendoSlotSim($id){
+    public function removendoSlotSim($id)
+    {
         $slotSim = SlotSim::find($id);
 
         $slotSim->delete();
 
-        return redirect('/slotSim');
+        return redirect('/admin/slotsim/excluido');
     }
 }

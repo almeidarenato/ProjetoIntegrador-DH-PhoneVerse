@@ -49,3 +49,10 @@ Route::get('/admin/memram/{salvo}', 'memoriaRamController@listandoMemoriaRam');
 Route::post('/admin/memram/adicionar', 'memoriaRamController@salvandoMemoriaRam');
 Route::post('/admin/memram/alterar/{id}', 'memoriaRamController@modificandoMemoriaRam');
 Route::delete('/admin/memram/excluir/{id}', 'memoriaRamController@removendoMemoriaRam');
+
+// CRUD Slot Sim
+Route::get('/admin/slotsim', 'slotSimController@listandoslotSim');
+Route::get('/admin/slotsim/{salvo}', 'slotSimController@listandoslotSim');
+Route::post('/admin/slotsim/adicionar', 'slotSimController@salvandoslotSim');
+Route::post('/admin/slotsim/alterar/{id}', 'slotSimController@modificandoslotSim');
+Route::delete('/admin/slotsim/excluir/{id}', 'slotSimController@removendoslotSim');
