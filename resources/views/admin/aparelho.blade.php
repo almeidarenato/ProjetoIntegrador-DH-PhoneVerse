@@ -54,8 +54,8 @@
                     <th scope="col">Mem. Ram</th>
                     <th scope="col">Cam. Frontal</th>
                     <th scope="col">Cam. Traseira</th>
-                    <th scope="col">Preço</th>
                     <th scope="col">Slot Sim</th>
+                    <th scope="col">Preço</th>
                     <th scope="col">Ações</th>
                   </tr>
                 </thead>
