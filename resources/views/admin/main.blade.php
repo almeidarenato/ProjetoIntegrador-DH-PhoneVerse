@@ -58,17 +58,17 @@ crossorigin="anonymous"
             >Cadastros</a
             >
             <div class="dropdown-menu" aria-labelledby="dropdown01">
-                <a class="dropdown-item" href="#">Aparelho</a>
-                <a class="dropdown-item" href="#">Marca</a>
-                <a class="dropdown-item" href="#"
+                <a class="dropdown-item" href="/admin/aparelho">Aparelho</a>
+                <a class="dropdown-item" href="/admin/marcas">Marca</a>
+                <a class="dropdown-item" href="/admin/sisop"
                 >Sistema Operacional</a
                 >
-                <a class="dropdown-item" href="#">Processador</a>
-                <a class="dropdown-item" href="#"
+                <a class="dropdown-item" href="/admin/processador">Processador</a>
+                <a class="dropdown-item" href="/admin/memint"
                 >Memória Interna</a
                 >
-                <a class="dropdown-item" href="#">Memória Ram</a>
-                <a class="dropdown-item" href="#">Slot Sim</a>
+                <a class="dropdown-item" href="/admin/memram">Memória Ram</a>
+                <a class="dropdown-item" href="/admin/slotsim">Slot Sim</a>
             </div>
         </li>
     </ul>

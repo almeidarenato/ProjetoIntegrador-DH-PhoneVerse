@@ -70,6 +70,7 @@
 <div class="d-flex justify-content-center">
         {{ $sistemasOperacionais->links() }}
 </div>
+@endif
 <!-- Modal de Inclusão -->
 <div class="modal fade" id="adicionar" tabindex="-1" role="dialog"  aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -165,5 +166,4 @@
       </div>
       @endforeach
 <!--/ Modal de Exclusão -->
-@endif
 @endsection
