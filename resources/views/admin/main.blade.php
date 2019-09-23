@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Phoneverse - admin - @yield('title') </title>
     <link rel="stylesheet" href={{asset("css/app.css")}} />
     <link rel="stylesheet" href={{asset("css/offcanvas.css")}} />
@@ -19,6 +20,7 @@ crossorigin="anonymous"
                 $(function () {
               $('[data-toggle="tooltip"]').tooltip()
             })
+           $('.toast').toast(option)
             </script>
     <nav class="navbar navbar-expand-md fixed-top navbar-dark  bg-purple">
         <a class="navbar-brand" href="#"
@@ -37,9 +39,9 @@ crossorigin="anonymous"
     id="navbarsExampleDefault"
     >
     <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
+        <li class="nav-item">
             <a class="nav-link" href="#"
-            >Home <span class="sr-only">(current)</span></a
+            >Home </a
             >
         </li>
         <li class="nav-item">
@@ -56,17 +58,17 @@ crossorigin="anonymous"
             >Cadastros</a
             >
             <div class="dropdown-menu" aria-labelledby="dropdown01">
-                <a class="dropdown-item" href="#">Aparelho</a>
-                <a class="dropdown-item" href="#">Marca</a>
-                <a class="dropdown-item" href="#"
+                <a class="dropdown-item" href="/admin/aparelho">Aparelho</a>
+                <a class="dropdown-item" href="/admin/marcas">Marca</a>
+                <a class="dropdown-item" href="/admin/sisop"
                 >Sistema Operacional</a
                 >
-                <a class="dropdown-item" href="#">Processador</a>
-                <a class="dropdown-item" href="#"
+                <a class="dropdown-item" href="/admin/processador">Processador</a>
+                <a class="dropdown-item" href="/admin/memint"
                 >Memória Interna</a
                 >
-                <a class="dropdown-item" href="#">Memória Ram</a>
-                <a class="dropdown-item" href="#">Slot Sim</a>
+                <a class="dropdown-item" href="/admin/memram">Memória Ram</a>
+                <a class="dropdown-item" href="/admin/slotsim">Slot Sim</a>
             </div>
         </li>
     </ul>

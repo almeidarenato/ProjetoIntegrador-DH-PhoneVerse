@@ -9,9 +9,9 @@ class memoriaRamController extends Controller
 {
     public function listandoMemoriaRam()
     {
-        $memoriaRam = MemoriaRam::all();
+        $memoriaRam = MemoriaRam::orderBy('id', 'ASC')->paginate(5);
 
-        return view('listandoMemoriaRam')
+        return view('admin.memoriaram')
             ->with('memoriaRam', $memoriaRam);
     }
 
@@ -32,7 +32,7 @@ class memoriaRamController extends Controller
 
         $memoriaRam->save();
 
-        return redirect('/memoriaram');
+        return redirect('/admin/memram/salvo');
     }
     public function alterandoMemoriaRam($id)
     {
@@ -53,7 +53,7 @@ class memoriaRamController extends Controller
 
         $memoriaRam->save();
 
-        return redirect('/memoriaram');
+        return redirect('/admin/memram/editado');
     }
 
     public function removendoMemoriaRam($id)
@@ -62,6 +62,6 @@ class memoriaRamController extends Controller
 
         $memoriaRam->delete();
 
-        return redirect('/memoriaram');
+        return redirect('/admin/memram/excluido');
     }
 }

@@ -7,11 +7,11 @@ use App\Processador;
 
 class processadorController extends Controller
 {
-    public function listandoProcessadores()
+    public function listandoProcessador()
     {
-        $processadores = Processador::all();
+        $processadores = Processador::orderBy('id', 'ASC')->paginate(5);
 
-        return view('listandoProcessadores')
+        return view('admin.processador')
             ->with('processadores', $processadores);
     }
 
@@ -34,7 +34,7 @@ class processadorController extends Controller
 
         $processador->save();
 
-        return redirect('/Processadores');
+        return redirect('/admin/processador/salvo');
     }
     public function alterandoProcessador($id)
     {
@@ -43,7 +43,7 @@ class processadorController extends Controller
         return view('adicionandoProcessador')->with('processador', $processador);
     }
 
-    public function modeificandoProcessador(Request $request, $id)
+    public function modificandoProcessador(Request $request, $id)
     {
         $processador = Processador::find($id);
 
@@ -57,7 +57,7 @@ class processadorController extends Controller
 
         $processador->save();
 
-        return redirect('/processadores');
+        return redirect('/admin/processador/editado');
     }
 
     public function removendoProcessador($id)
@@ -66,6 +66,6 @@ class processadorController extends Controller
 
         $processador->delete();
 
-        return redirect('/processadores');
+        return redirect('/admin/processador/excluido');
     }
 }
