@@ -70,3 +70,10 @@ Route::get('/admin/sisop/{salvo}', 'sistemaOperacionalController@listandoSistema
 Route::post('/admin/sisop/adicionar', 'sistemaOperacionalController@salvandoSistemaOperacional');
 Route::post('/admin/sisop/alterar/{id}', 'sistemaOperacionalController@modificandoSistemaOperacional');
 Route::delete('/admin/sisop/excluir/{id}', 'sistemaOperacionalController@removendoSistemaOperacional');
+
+// CRUD Aparelho
+Route::get('/admin/aparelho', 'aparelhoController@listandoAparelhos');
+Route::get('/admin/aparelho/{salvo}', 'aparelhoController@listandoAparelhos');
+Route::post('/admin/aparelho/adicionar', 'aparelhoController@salvandoAparelho');
+Route::post('/admin/aparelho/alterar/{id}', 'aparelhoController@modificandoAparelho');
+Route::delete('/admin/aparelho/excluir/{id}', 'aparelhoController@removendoAparelho');
