@@ -77,3 +77,6 @@ Route::get('/admin/aparelho/{salvo}', 'aparelhoController@listandoAparelhos');
 Route::post('/admin/aparelho/adicionar', 'aparelhoController@salvandoAparelho');
 Route::post('/admin/aparelho/alterar/{id}', 'aparelhoController@modificandoAparelho');
 Route::delete('/admin/aparelho/excluir/{id}', 'aparelhoController@removendoAparelho');
+
+// Dashboard
+Route::get('/admin/dashboard', 'dashboardController@contaEntidades');

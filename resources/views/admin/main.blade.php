@@ -9,11 +9,14 @@
     <link rel="stylesheet" href={{asset("css/app.css")}} />
     <link rel="stylesheet" href={{asset("css/offcanvas.css")}} />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{asset('css/cards.css')}}">
+
     <script
 src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
 integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
 crossorigin="anonymous"
 ></script>
+@yield('head-script')
 <style>
     * {
       box-sizing: border-box;
@@ -38,7 +41,6 @@ crossorigin="anonymous"
                 $(function () {
               $('[data-toggle="tooltip"]').tooltip()
             })
-           $('.toast').toast(option)
             </script>
     <nav class="navbar navbar-expand-md fixed-top navbar-dark  bg-purple">
         <a class="navbar-brand" href="#"
@@ -58,8 +60,8 @@ crossorigin="anonymous"
     >
     <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-            <a class="nav-link" href="#"
-            >Home </a
+            <a class="nav-link" href="/admin/dashboard"
+            >Dashboard </a
             >
         </li>
         <li class="nav-item">
@@ -136,5 +138,6 @@ crossorigin="anonymous"
 
 <script src={{asset("js/app.js")}}></script>
 <script src={{asset("js/offcanvas.js")}}></script>
+
 </body>
 </html>
