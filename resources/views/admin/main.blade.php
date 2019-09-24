@@ -14,6 +14,24 @@ src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
 integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
 crossorigin="anonymous"
 ></script>
+<style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .zoom {
+
+      transition: transform .2s;
+
+      margin: 0 auto;
+    }
+
+    .zoom:hover {
+      -ms-transform: scale(3); /* IE 9 */
+      -webkit-transform: scale(3); /* Safari 3-8 */
+      transform: scale(3);
+    }
+    </style>
 </head>
 <body class="bg-light">
         <script>
