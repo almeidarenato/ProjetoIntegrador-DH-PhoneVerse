@@ -64,7 +64,7 @@
                   <tr>
                     <th scope="row">{{$aparelho->id}}</th>
                     <td>{{$aparelho->modelo}}</td>
-                    <td><img src="{{asset($aparelho->imagem)}}" width="80"height="80"></td>
+                    <td><div class="zoom"><img src="{{asset($aparelho->imagem)}}" width="80"height="80"></div></td>
                     <td>{{$aparelho->marca->nome}}</td>
                     <td>{{$aparelho->sistemaoperacional->nome}} - {{$aparelho->sistemaoperacional->versao}}</td>
                     <td>{{$aparelho->processador->modelo}}</td>
