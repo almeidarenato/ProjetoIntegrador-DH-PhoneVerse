@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('frontend.landing');
 });
 
+Route::get('/teste', function () {
+    return view('frontend.teste');
+});
+
 Route::post('/respostas', 'QuestionarioController@cadastrar');
 
 Auth::routes();
@@ -23,6 +27,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/top3', function () {
     return view('top_page');
+});
+
+
+Route::get('/produto', function(){
+    return view('product');
 });
 
 Route::get('/admin', function () {
@@ -80,3 +89,4 @@ Route::delete('/admin/aparelho/excluir/{id}', 'aparelhoController@removendoApare
 
 // Dashboard
 Route::get('/admin/dashboard', 'dashboardController@contaEntidades');
+

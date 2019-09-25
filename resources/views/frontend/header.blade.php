@@ -5,7 +5,7 @@
                 <i class="fa fa-bars"></i>
             </button>
             <a class="navbar-brand" href="#">
-                <img src="/img/logo.png" alt="" srcset="" class='logo'>
+                <img src="/img/logo.png" alt="" srcset="" class="logo" style="filter: drop-shadow(2px 4px 6px black);">
             </a>
         </div>
 
