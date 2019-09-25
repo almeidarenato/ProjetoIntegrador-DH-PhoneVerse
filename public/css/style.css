@@ -5,6 +5,125 @@
     Author URL: https://bootstrapmade.com
 */
 
+
+.p_description {
+  color: white;
+  list-style-type: none;
+  text-align: left;
+  font-size: 14px;
+  margin-left: -25px;
+  margin-top: 60px;
+  line-height: 2.3;
+  font-family: Montserrat, sans-serif;
+}
+
+.product_page_description {
+  color: #4c174c;
+  list-style-type: none;
+  text-align: left;
+  font-size: 14px;
+  margin-left: -25px;
+  margin-top: 60px;
+  line-height: 2.3;
+  font-family: Montserrat, sans-serif;
+}
+
+.botoes_top3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+h3#faixa-vermais {
+  background-color:#4c174c; 
+  color:#fff;
+}
+
+#mais9{
+  background-color: #e8eaeb;
+}
+
+/* Flip Card */
+
+.flip-card {
+  background-color: transparent;
+  width: 250px;
+  height: 250px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content:center;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #4c174c;
+  color: white;
+  transform: rotateY(180deg);
+  border-radius:7px;
+}
+
+/* flip button */
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+
 /* ==== Logo ==== */
 .logo {
     width: 150px;
@@ -404,6 +523,11 @@
 
   .team p.subtitle {
     margin-bottom: 10px;
+    font-weight: 100;
+    font-weight: lighter;
+    font-size: 25px;
+    font-style: normal;
+    font-family: 'Montserrat';
   }
 
   .avatar {
