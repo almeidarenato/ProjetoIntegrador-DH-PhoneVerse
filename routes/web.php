@@ -11,6 +11,8 @@
 |
 */
 
+use App\Http\Controllers\aparelhoController;
+
 Route::get('/', function () {
     return view('frontend.landing');
 });
@@ -80,3 +82,6 @@ Route::delete('/admin/aparelho/excluir/{id}', 'aparelhoController@removendoApare
 
 // Dashboard
 Route::get('/admin/dashboard', 'dashboardController@contaEntidades');
+
+//Informações para pagina do aparelho
+Route::get('/aparelho/{id}', 'aparelhoController@encontrandoAparelho');
