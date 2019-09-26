@@ -475,17 +475,188 @@
                     </div>
                     <p>&copy;PhoneVerse.</p>
                     <div class="credits">
-                        <!--
-                  All the links in the footer should remain intact.
-                  You can delete the links only if you purchased the pro version.
-                  Licensing information: https://bootstrapmade.com/license/
-                  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Squadfree
-                -->
-                        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                        
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalFAQ">
+  Perguntas Frequentes
+</button>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Modal FAQ -->
+<div class="modal fade" id="modalFAQ" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog  modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Principais dúvidas:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+              <div class="container">
+                <div class="accordion" id="accordionExample">  
+                  <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Quais marcas ha disponíveis no PhoneVerse?
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                      Trabalhamos com todas as marcas atuais do mercado.
+                    </div>
+                  </div>
+                  </div>
+                    <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                        aria-controls="collapseTwo">
+                        Alem de tudo o que ha disponível em facilitar a busca de um celular, em que mais a PhoneVerse pode me beneficiar?
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                      Se compartilhar nosso link com um amigo que fizer uma compra conosco,nós creditamos 20% do valor da compra para você.
+                    </div>
+                  </div>
+                    </div>
+                <div class="card">
+                  <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                        aria-controls="collapseThree">
+                        Como é feito esse sistema de pagamento pela indicação?
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                      Através do cadastro da pessoa a quem você esta indicando, ele deverá preencher o e-mail e dados básicos seu e nosso sistema
+                      irá enviar os 20% do valor para a sua conta corrente cadastrada.
+                    </div>
+                  </div>
+                </div>
+                   <div class="card">
+                      <div class="card-header" id="headingFour">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                              Como a PhoneVerse foi criada?
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Através de um projeto do curso de Desenvolvimento Web Full Stack da Digital House.
+                        </div>
+                      </div>
+                    </div>
+                  </div> 
+                <div class="card">
+                    <div class="card-header" id="headingFive">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                          Em que Ano a PhoneVerse foi desenvolvida?
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                      <div class="card-body">
+                          Iniciamos o conceito e o desenvolvimento da web em 2019.
+                      </div>
+                    </div>
+                </div>
+                  <div class="card">
+                    <div class="card-header" id="headingSix">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false"
+                          aria-controls="collapseSix">
+                          A Phoneverse será somente especializada em smartphones?
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                      <div class="card-body">
+                          Sim, porém futuramente vamos trabalhar com tablets e notebooks também. 
+                      </div>
+                    </div>
+                  </div>
+                <div class="card">
+                  <div class="card-header" id="headingSeven">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false"
+                        aria-controls="collapseSeven">
+                        Onde posso encontrar informações técnicas sobre um telefone?
+                      </button>
+                    </h2>
+                  </div>
+                    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+                      <div class="card-body">
+                          Na ficha do aparelho, você vai encontrar uma guia "DESCRIÇÃO" que contém todas as informações e funções do telefone.
+                      </div>
+                    </div>
+                </div>
+                  <div class="card">
+                    <div class="card-header" id="headingEight">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false"
+                          aria-controls="collapseEight">
+                          Encontrei uma informação errada em um dos celulares, como posso solicitar alteração?
+                        </button>
+                      </h2>
+                    </div>
+                      <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+                        <div class="card-body">
+                          Basta preencher o formulário localizado na página principal com o nome a ser alterado e a sugestão.
+                        </div>
+                      </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingNine">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false"
+                          aria-controls="collapseNine">
+                            Não encontrei um celular aqui! Como solicito informações ?
+                        </button>
+                      </h2>
+                    </div>
+                      <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
+                        <div class="card-body">
+                          A Phoneverse vai adicionando aos poucos os celulares mais recentes assim que todas as informações estiverem disponíveis. De qualquer maneira basta nos notificar pelo formulário de contato.
+                        </div>
+                    </div>
+                  </div>
+                <div class="card">
+                  <div class="card-header" id="headingTen">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false"
+                        aria-controls="collapseTen">
+                        Li tudo mas ainda assim, não encontrei uma resposta para minha dúvida, o que eu faço?
+                      </button>
+                    </h2>
+                  </div>
+                <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
+                  <div class="card-body">
+                    Basta preencher o formulário abaixo e nos dizer do que precisa. Não se esqueça de suas informações e contato! E em breve você receberá uma resposta de nossa equipe por e-mail.
+                  </div>
+                </div>
+              </div>    
+              </div>
+            </div>
+        
+        <!-- Aqui vai o conteúdo das perguntas frequentes -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
     </footer>
 
 
