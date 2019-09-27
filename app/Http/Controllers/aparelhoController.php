@@ -13,6 +13,13 @@ use App\SlotSim;
 
 class aparelhoController extends Controller
 {
+    public function encontrandoAparelho($id)
+    {
+        $aparelho = Aparelho::find($id);
+
+        return view('product')->with('aparelho', $aparelho);
+    }
+    
     public function listandoAparelhos()
     {
 
