@@ -29,9 +29,6 @@ Route::get('/top3', function(){
     return view('top_page');
 });
 
-Route::get('/top3x', function(){
-    return view('top_page_x');
-});
 
 Route::get('/produto', function(){
     return view('product');
