@@ -35,7 +35,7 @@ class marcaController extends Controller
     }
     public function alterandoMarca($id)
     {
-        $marcas = Marca::find($id);
+        $marca = Marca::find($id);
 
         return view('adicionandoMarca')->with('marca', $marca);
     }

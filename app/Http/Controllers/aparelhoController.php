@@ -17,7 +17,7 @@ class aparelhoController extends Controller
     {
         $aparelho = Aparelho::find($id);
 
-        return view('encontrandoAparelho')->with('aparelho', $aparelho);
+        return view('product')->with('aparelho', $aparelho);
     }
     
     public function listandoAparelhos()
