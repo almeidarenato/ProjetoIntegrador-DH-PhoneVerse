@@ -78,7 +78,7 @@
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="wow bounceInDown" data-wow-delay="0.4s">
                             <div class="section-heading">
-                                <h2>Seu Produto Predileto!</h2>
+                                <h2>{{$aparelho->modelo}}</h2>
                                 {{-- <i class="fa fa-2x fa-angle-down"></i> --}}
 
                             </div>
@@ -105,6 +105,7 @@
                                     <li>Câmera Frontal: {{ $aparelho->camerafrontal }}mpx</li>
                                     <li>Câmera Traseira: {{ $aparelho->cameratraseira }}mpx</li>
                                     <li>Slot Sim: {{ $aparelho->slotsim->quantidade }}</li>
+                                    <li>Bateria: {{ $aparelho->bateria}} mAh</li>
                                     <li>Preço: R$ {{ $aparelho->preco }}</li>
                                 </ul>
                             </div>

@@ -27,6 +27,7 @@ class CreateAparelhosTable extends Migration
             $table->integer('cameratraseira')->nullable(false);
             $table->double('preco')->nullable(false);
             $table->string('imagem')->nullable(true);
+            $table->integer('bateria')->nullable(false);
         });
     }
 
