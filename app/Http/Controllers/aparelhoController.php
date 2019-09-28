@@ -52,7 +52,8 @@ class aparelhoController extends Controller
             "modelo" => "required|max:50",
             'camerafrontal' => "required",
             'cameratraseira' => "required",
-            'preco' => "required"
+            'preco' => "required",
+            'bateria' => 'required'
         ]);
         //* subindo imagem //
         $arquivo = $request->file('imagem');
@@ -74,7 +75,8 @@ class aparelhoController extends Controller
             "id_slotsim" => $request->input('slotsim'),
             "camerafrontal" => $request->input('camerafrontal'),
             "cameratraseira" => $request->input('cameratraseira'),
-            "preco" => $request->input('preco')
+            "preco" => $request->input('preco'),
+            "bateria"=>$request->input('bateria')
         ]);
 
         $aparelho->save();
@@ -88,7 +90,8 @@ class aparelhoController extends Controller
             "modelo" => "required|max:50",
             'camerafrontal' => "required",
             'cameratraseira' => "required",
-            'preco' => "required"
+            'preco' => "required",
+            'bateria' => 'required'
         ]);
         //* subindo imagem //
         if (null !==$request->file('imagem')) {
@@ -112,6 +115,7 @@ class aparelhoController extends Controller
         $aparelho->camerafrontal = $request->input('camerafrontal');
         $aparelho->cameratraseira = $request->input('cameratraseira');
         $aparelho->preco = $request->input('preco');
+        $aparelho->bateria = $request->input('bateria');
 
         $aparelho->save();
 

@@ -6,22 +6,17 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Questionario;
 use App\User;
-
+use App\Aparelho;
 class QuestionarioController extends Controller
 {
 
     public function cadastrar(Request $request)
     {
         //var_dump($request->input('dtNascimento'));
+
         $opcao = $request->input('opcaousuario');
         if ($opcao == 'esquerda') {
 
-            //echo $date;
-            //exit;
-            //var_dump($date);
-            // $date =  date('d/M/Y h:i:s', $date);
-            //var_dump($date);
-            //$motivo
             $naoquero = $request->input('naoQuero');
             if ($request->has('naoQuero')) {
                 $respostas = [
@@ -38,15 +33,7 @@ class QuestionarioController extends Controller
                     'senha' => 'required',
                     'dtNascimento' => 'required'
                 ]);
-                //$email = $request->input('email');
-                // $verifica = User::whereEmail($email)->get();
 
-                /* if (isset($verifica[0]->email)) {
-                echo "seu e-mail já está cadastrado";
-            } else {
-                echo "oba seu email é novo";
-                exit;
-                */
                 $respostas = [
                     'nome' => $request->input('nome'),
                     'email' => $request->input('email'),
@@ -66,11 +53,29 @@ class QuestionarioController extends Controller
                     'motivo' => $request->input('resp3'),
                     'usoCelular' => $request->input('resp4')
                 ]);
+                $user->save();
             }
-            //echo $respostas['email'];
-            //var_dump($respostas);
+
+            // meu celular vive na tomada = > 3000
+            // meu atual quebrou = < 1800
+            // processador = alguns + memoria = 4
+            // preco > 2000
+
+            // jogar = proc + memoria
+            // redes sociais = < proc basico < memoria = 3
+            // trabalhar e video = bateria >= 4000
+            // tirar foto = camera frontal > 30 camera traseira > 40
+
+
+
+            return redirect('top3/aaa/' .$request->input('precoDe') );
         } else {
+            // usuario escolheu o formulario da esquerda
+
             if ($request->has('naoQuero')) {
+
+                // ele nao deseja salvar as informações
+
                 $respostas = [
                     // Usuario
                     'name' => $request->input('nomeDireita'),
@@ -109,9 +114,10 @@ class QuestionarioController extends Controller
                     'memoriaRam' => $request->input('memoriaRam')
 
                 ];
-
-                //return view('respostas')->with('respostas',$respostas);
             } else {
+
+                //ele deseja se cadastrar 
+
                 $respostas = [
                     // Usuario
                     'name' => $request->input('nomeDireita'),
@@ -186,9 +192,36 @@ class QuestionarioController extends Controller
                     'memoriaInterna' => $request->input('memoriaInterna'),
                     'memoriaRam' => $request->input('memoriaRam')
                 ]);
+                
+                $user->save();
+                // 
             }
+            return redirect('top3/precode/' .$request->input('precoDe') . '/precoate/' .$request->input('precoAte'));
         }
-        $user->save();
-        return view('respostas')->with('respostas', $respostas);
+        
+
+        //return view('respostas')->with('respostas', $respostas);
+       // return redirect('top3/precode/' . $precode . '/precoate/' .$precoate);
+
     }
+
+
+    public function teste()
+    {
+        $precode = 0;
+        $precoate =9000;
+        return redirect('top3/precode/' . $precode . '/precoate/' .$precoate);
+    }
+    public function resultados($precode,$precoate)
+    {
+        $aparelho = Aparelho::all()->whereBetween('preco', array($precode , $precoate))
+        ->where('id',6);
+
+
+        print_r($aparelho);
+        exit;
+        return redirect('top3/id/');
+    }
+
+
 }

@@ -23,16 +23,25 @@ Route::get('/teste', function () {
 
 Route::post('/respostas', 'QuestionarioController@cadastrar');
 
+Route::get('/top3/', 'QuestionarioController@teste');
+
+
+//rota me ajude a escolher
+Route::get('/top3/aaa', 'QuestionarioController@resultados');
+//rota eu sei oque estou fazendo
+Route::get('/top3/precode/{precode}/precoate/{precoate}', 'QuestionarioController@resultados');
+//Route::get('/top3/aparelho/{aparelho?}/motivo/{motivo?}/usocelular/{usocelular]', 'QuestionarioController@resultados');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/top3', function () {
-    return view('top_page');
-});
+// Route::get('/top3', function () {
+//     return view('top_page');
+// });
 
 
-Route::get('/produto', function(){
+Route::get('/produto', function () {
     return view('product');
 });
 
@@ -94,3 +103,6 @@ Route::get('/admin/dashboard', 'dashboardController@contaEntidades');
 
 //Informações para pagina do aparelho
 Route::get('/aparelho/{id}', 'aparelhoController@encontrandoAparelho');
+
+//Informações para top 3
+Route::get('/top_page/', 'aparelhoController@encontrandoAparelho');
