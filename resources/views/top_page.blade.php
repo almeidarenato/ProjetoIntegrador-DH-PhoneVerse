@@ -88,7 +88,7 @@
                     <div class="team boxed-grey">
                         <div class="inner">
                             <h5>1º Opção</h5>
-                            <p class="subtitle">Motoral Z² Play</p>
+                            <p class="subtitle">{{$aparelho->marca}} {{$aparelho->modelo}}</p>
                             <div class="flip-card">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front">

@@ -11,6 +11,8 @@
 |
 */
 
+use App\Http\Controllers\aparelhoController;
+
 Route::get('/', function () {
     return view('frontend.landing');
 });
@@ -21,16 +23,25 @@ Route::get('/teste', function () {
 
 Route::post('/respostas', 'QuestionarioController@cadastrar');
 
+Route::get('/top3/', 'QuestionarioController@teste');
+
+
+//rota me ajude a escolher
+Route::get('/top3/aaa', 'QuestionarioController@resultados');
+//rota eu sei oque estou fazendo
+Route::get('/top3/precode/{precode}/precoate/{precoate}', 'QuestionarioController@resultados');
+//Route::get('/top3/aparelho/{aparelho?}/motivo/{motivo?}/usocelular/{usocelular]', 'QuestionarioController@resultados');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/top3', function () {
-    return view('top_page');
-});
+// Route::get('/top3', function () {
+//     return view('top_page');
+// });
 
 
-Route::get('/produto', function(){
+Route::get('/produto', function () {
     return view('product');
 });
 
@@ -90,3 +101,8 @@ Route::delete('/admin/aparelho/excluir/{id}', 'aparelhoController@removendoApare
 // Dashboard
 Route::get('/admin/dashboard', 'dashboardController@contaEntidades');
 
+//Informações para pagina do aparelho
+Route::get('/aparelho/{id}', 'aparelhoController@encontrandoAparelho');
+
+//Informações para top 3
+Route::get('/top_page/', 'aparelhoController@encontrandoAparelho');

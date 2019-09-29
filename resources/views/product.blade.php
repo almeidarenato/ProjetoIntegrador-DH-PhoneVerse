@@ -9,16 +9,16 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>PhoneVerse</title>
 
-        <!-- Range Requires -->
-        <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Range Requires -->
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
     <!-- JQuery UI + JQUERY-->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/css/bootstrap-slider.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/css/bootstrap-slider.min.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<script src="https://use.fontawesome.com/fd9dba5260.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/fd9dba5260.js"></script>
 
 
 
@@ -78,7 +78,7 @@
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="wow bounceInDown" data-wow-delay="0.4s">
                             <div class="section-heading">
-                                <h2>Seu Produto Predileto!</h2>
+                                <h2>{{$aparelho->modelo}}</h2>
                                 {{-- <i class="fa fa-2x fa-angle-down"></i> --}}
 
                             </div>
@@ -87,35 +87,34 @@
                 </div>
             </div>
         </div>
-    <div class="container">
+        <div class="container">
             <div class="row">
-                    <div class="col-md-12">
-                        <div class="wow bounceInUp" data-wow-delay="0.2s">
-                            <div class="team boxed-grey">
-                                <div class="inner">
-                                    <h5>1º Opção</h5>
-                                    <p class="subtitle">Motoral Z² Play</p>
-                                    <div class="avatar"><img src="/img/motorola_z2.jpg" alt="" class="img-responsive" /></div>
-                                    <ul class="product_page_description">
-                                        <li>Marca:----------------------</li>
-                                        <li>Sistema Operacional:--------</li>
-                                        <li>Processador:----------------</li>
-                                        <li>Memória Interna:------------</li>
-                                        <li>Memória RAM:----------------</li>
-                                        <li>Câmera Frontal:-------------</li>
-                                        <li>Memória RAM:----------------</li>
-                                        <li>Memória Interna:------------</li>
-                                        <li>Câmera Traseira:------------</li>
-                                        <li>Slot Sim:-------------------</li>
-                                        <li>Preço:----------------------</li>                                      
-                                    </ul>
-                                </div>
+                <div class="col-md-12">
+                    <div class="wow bounceInUp" data-wow-delay="0.2s">
+                        <div class="team boxed-grey">
+                            <div class="inner">
+                                <h5>1º Opção</h5>
+                                <p class="subtitle">{{$aparelho->modelo}}</p>
+                                <div class="avatar"><img src="{{asset($aparelho->imagem)}}" alt="" class="img-responsive" /></div>
+                                <ul class="product_page_description">
+                                    <li>Marca: {{ $aparelho->marca->nome}}</li>
+                                    <li>Sistema Operacional: {{ $aparelho->sistemaoperacional->nome}} {{ $aparelho->sistemaoperacional->versao }}</li>
+                                    <li>Processador: {{ $aparelho->processador->marca }} {{$aparelho->processador->modelo}}</li>
+                                    <li>Memória Interna: {{ $aparelho->memoriainterna->quantidade }}GB</li>
+                                    <li>Memória RAM: {{ $aparelho->memoriaram->quantidade }}GB</li>
+                                    <li>Câmera Frontal: {{ $aparelho->camerafrontal }}mpx</li>
+                                    <li>Câmera Traseira: {{ $aparelho->cameratraseira }}mpx</li>
+                                    <li>Slot Sim: {{ $aparelho->slotsim->quantidade }}</li>
+                                    <li>Bateria: {{ $aparelho->bateria}} mAh</li>
+                                    <li>Preço: R$ {{ $aparelho->preco }}</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
- 
-</section>
+
+    </section>
     <footer>
         <div class="container">
             <div class="row">
@@ -155,4 +154,5 @@
     <script type="text/javascript" src="/js/questionario.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </body>
+
 </html>

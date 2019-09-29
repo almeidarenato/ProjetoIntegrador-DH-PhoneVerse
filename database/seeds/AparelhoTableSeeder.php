@@ -12,6 +12,6 @@ class AparelhoTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Aparelho::create(["id" => 1, "idmarca" => "Apple"]);
     }
 }

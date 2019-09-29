@@ -13,6 +13,13 @@ use App\SlotSim;
 
 class aparelhoController extends Controller
 {
+    public function encontrandoAparelho($id)
+    {
+        $aparelho = Aparelho::find($id);
+
+        return view('product')->with('aparelho', $aparelho);
+    }
+
     public function listandoAparelhos()
     {
 
@@ -45,7 +52,8 @@ class aparelhoController extends Controller
             "modelo" => "required|max:50",
             'camerafrontal' => "required",
             'cameratraseira' => "required",
-            'preco' => "required"
+            'preco' => "required",
+            'bateria' => 'required'
         ]);
         //* subindo imagem //
         $arquivo = $request->file('imagem');
@@ -67,7 +75,8 @@ class aparelhoController extends Controller
             "id_slotsim" => $request->input('slotsim'),
             "camerafrontal" => $request->input('camerafrontal'),
             "cameratraseira" => $request->input('cameratraseira'),
-            "preco" => $request->input('preco')
+            "preco" => $request->input('preco'),
+            "bateria"=>$request->input('bateria')
         ]);
 
         $aparelho->save();
@@ -81,20 +90,22 @@ class aparelhoController extends Controller
             "modelo" => "required|max:50",
             'camerafrontal' => "required",
             'cameratraseira' => "required",
-            'preco' => "required"
+            'preco' => "required",
+            'bateria' => 'required'
         ]);
         //* subindo imagem //
-        $arquivo = $request->file('imagem');
-        $nomePasta = 'uploads';
-        $arquivo->storePublicly($nomePasta);
-        $caminhoAbsoluto = public_path() . "/storage/$nomePasta";
-        $nomeArquivo = $arquivo->getClientOriginalName();
-        $caminhoRelativo = "storage/$nomePasta/$nomeArquivo";
-        $arquivo->move($caminhoAbsoluto, $nomeArquivo);
-
+        if (null !==$request->file('imagem')) {
+            $arquivo = $request->file('imagem');
+            $nomePasta = 'uploads';
+            $arquivo->storePublicly($nomePasta);
+            $caminhoAbsoluto = public_path() . "/storage/$nomePasta";
+            $nomeArquivo = $arquivo->getClientOriginalName();
+            $caminhoRelativo = "storage/$nomePasta/$nomeArquivo";
+            $arquivo->move($caminhoAbsoluto, $nomeArquivo);
+            $aparelho->imagem = $caminhoRelativo;
+        }
 
         $aparelho->modelo = $request->input('modelo');
-        $aparelho->imagem = $caminhoRelativo;
         $aparelho->id_marca = $request->input('marca');
         $aparelho->id_sistemaoperacional = $request->input('sistemaoperacional');
         $aparelho->id_processador = $request->input('processador');
@@ -104,6 +115,7 @@ class aparelhoController extends Controller
         $aparelho->camerafrontal = $request->input('camerafrontal');
         $aparelho->cameratraseira = $request->input('cameratraseira');
         $aparelho->preco = $request->input('preco');
+        $aparelho->bateria = $request->input('bateria');
 
         $aparelho->save();
 
