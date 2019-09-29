@@ -21,6 +21,10 @@ Route::get('/teste', function () {
     return view('frontend.teste');
 });
 
+Route::get('/respostas', function () {
+    return view('respostas');
+});
+
 Route::post('/respostas', 'QuestionarioController@cadastrar');
 
 Route::get('/top3/', 'QuestionarioController@teste');
@@ -34,12 +38,15 @@ Route::get('/top3/precode/{precode}/precoate/{precoate}', 'QuestionarioControlle
 
 Auth::routes();
 
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 // Route::get('/top3', function () {
 //     return view('top_page');
 // });
 
+//Mail
+Route::post('/email', 'QuestionarioController@enviaEmail');
 
 Route::get('/produto', function () {
     return view('product');

@@ -7,6 +7,10 @@ use Illuminate\Support\Facades\Hash;
 use App\Questionario;
 use App\User;
 use App\Aparelho;
+use App\Mail\TestEmail;
+use App\Mail\ContactEmail;
+use Mail;
+
 class QuestionarioController extends Controller
 {
 
@@ -68,7 +72,7 @@ class QuestionarioController extends Controller
 
 
 
-            return redirect('top3/aaa/' .$request->input('precoDe') );
+            return redirect('top3/aaa/' . $request->input('precoDe'));
         } else {
             // usuario escolheu o formulario da esquerda
 
@@ -116,7 +120,7 @@ class QuestionarioController extends Controller
                 ];
             } else {
 
-                //ele deseja se cadastrar 
+                //ele deseja se cadastrar
 
                 $respostas = [
                     // Usuario
@@ -192,16 +196,16 @@ class QuestionarioController extends Controller
                     'memoriaInterna' => $request->input('memoriaInterna'),
                     'memoriaRam' => $request->input('memoriaRam')
                 ]);
-                
+
                 $user->save();
-                // 
+                //
             }
-            return redirect('top3/precode/' .$request->input('precoDe') . '/precoate/' .$request->input('precoAte'));
+            return redirect('top3/precode/' . $request->input('precoDe') . '/precoate/' . $request->input('precoAte'));
         }
-        
+
 
         //return view('respostas')->with('respostas', $respostas);
-       // return redirect('top3/precode/' . $precode . '/precoate/' .$precoate);
+        // return redirect('top3/precode/' . $precode . '/precoate/' .$precoate);
 
     }
 
@@ -209,13 +213,13 @@ class QuestionarioController extends Controller
     public function teste()
     {
         $precode = 0;
-        $precoate =9000;
-        return redirect('top3/precode/' . $precode . '/precoate/' .$precoate);
+        $precoate = 9000;
+        return redirect('top3/precode/' . $precode . '/precoate/' . $precoate);
     }
-    public function resultados($precode,$precoate)
+    public function resultados($precode, $precoate)
     {
-        $aparelho = Aparelho::all()->whereBetween('preco', array($precode , $precoate))
-        ->where('id',6);
+        $aparelho = Aparelho::all()->whereBetween('preco', array($precode, $precoate))
+            ->where('id', 6);
 
 
         print_r($aparelho);
@@ -224,4 +228,22 @@ class QuestionarioController extends Controller
     }
 
 
+    public function enviaEmail(Request $request)
+    {
+        $name = $request->input('name');
+        $email = $request->input('emailinfo');
+
+        $mensagem = $request->input('message');
+        $subject = $request->input('subject');
+
+        $data = [
+            'name' => $name,
+            'email' => $email,
+            'text' => $mensagem,
+            'subject' => $subject
+        ];
+        Mail::to('contato@phoneverse.tech')->send(new ContactEmail($data));
+
+        return view('frontend.landing')->with(['email' => 'sucesso']);
+    }
 }
