@@ -95,7 +95,7 @@ return [
     'numeric' => 'The :attribute must be a number.',
     'present' => 'The :attribute field must be present.',
     'regex' => 'The :attribute format is invalid.',
-    'required' => 'O campo :attribute field é obrigatório.',
+    'required' => 'O campo :attribute é obrigatório.',
     'required_if' => 'The :attribute field is required when :other is :value.',
     'required_unless' => 'The :attribute field is required unless :other is in :values.',
     'required_with' => 'The :attribute field is required when :values is present.',
@@ -134,7 +134,7 @@ return [
         ],
         'email' => [
             'required' => 'Nós precisamos do seu e-mail',
-            'unique' => 'Parece que seu e-mail já está cadastrado no nosso site, por favor se logue'
+            'unique' => 'Parece que seu e-mail já está cadastrado no nosso site, por favor faça login'
         ],
     ],
 
