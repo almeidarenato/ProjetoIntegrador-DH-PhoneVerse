@@ -15,7 +15,7 @@ class Aparelho extends Model
     protected $table = "aparelhos"; //referencia a tabela que já existe
     protected $primaryKey = "id";
     protected $fillable = [
-        'id_marca', 'modelo', 'id_processador', 'id_memoriainterna', 'id_memoriaram', 'camerafrontal', 'cameratraseira', 'id_sistemaoperacional', 'id_slotsim', 'preco', 'imagem'
+        'id_marca', 'modelo', 'id_processador', 'id_memoriainterna', 'id_memoriaram', 'camerafrontal', 'cameratraseira', 'id_sistemaoperacional', 'id_slotsim', 'preco', 'imagem',
     ];
     public function marca()
     {

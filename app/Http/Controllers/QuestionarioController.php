@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Questionario;
 use App\User;
+use App\Mail\TestEmail;
+use App\Mail\ContactEmail;
+use Mail;
 
 class QuestionarioController extends Controller
 {
@@ -190,5 +193,23 @@ class QuestionarioController extends Controller
         }
         $user->save();
         return view('respostas')->with('respostas', $respostas);
+    }
+    public function enviaEmail(Request $request)
+    {
+        $name = $request->input('name');
+        $email = $request->input('emailinfo');
+
+        $mensagem = $request->input('message');
+        $subject = $request->input('subject');
+
+        $data = [
+            'name' => $name,
+            'email' => $email,
+            'text' => $mensagem,
+            'subject' => $subject
+        ];
+        Mail::to('contato@phoneverse.tech')->send(new ContactEmail($data));
+
+        return view('frontend.landing')->with(['email' => 'sucesso']);
     }
 }

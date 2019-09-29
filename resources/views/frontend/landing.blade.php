@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/css/bootstrap-slider.min.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script>
+
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="https://use.fontawesome.com/fd9dba5260.js"></script>
 
@@ -54,8 +54,8 @@
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
 
-    <!-- Preloader -->
-    <div id="preloader">
+ <!-- Preloader -->
+ <div id="preloader">
         <div id="load"></div>
     </div>
     @include('frontend.header')
@@ -236,8 +236,10 @@
 <!--/ Questionario - Preciso de Ajuda -->
 
 <!-- Configuração do Range de Tamanho -->
-<script>
+<script type="text/javascript">
+
        $( function() {
+
           $( "#tamanho-range" ).slider({
             range:true,
             min: 4,
@@ -259,7 +261,7 @@
             $('#tamanhoTelaDe').val($( "#tamanho-range" ).slider( "values", 0 ));
             $('#tamanhoTelaAte').val($( "#tamanho-range" ).slider( "values", 1 ));
         });
-        </script>
+    </script>
 <!--/ Configuração do Range de Tamanho -->
 <!-- Configuração do Range de Bateria -->
 <script>
@@ -283,7 +285,7 @@
            $( "#bateria" ).val( "" + $( "#bateria-range" ).slider( "values", 0 ) +
              "mAh  até " + $( "#bateria-range" ).slider( "values", 1 )+ "mAh ");
          } );
-</script>
+        </script>
  <!--/ Configuração do Range de Bateria -->
 <!-- Configuração do Range de Preço -->
 <script>
@@ -307,7 +309,7 @@
            $( "#preco" ).val( "" + $( "#preco-range" ).slider( "values", 0 ) +
              "R$  até " + $( "#preco-range" ).slider( "values", 1 )+ "R$ ");
          } );
-</script>
+        </script>
  <!--/ Configuração do Range de Preço -->
 <!-- Configuração do Range de Camera -->
 <script>
@@ -331,11 +333,11 @@
            $( "#camera" ).val( "" + $( "#camera-range" ).slider( "values", 0 ) +
              "MP até " + $( "#camera-range" ).slider( "values", 1 )+ "MP ");
          } );
-</script>
+        </script>
  <!--/ Configuração do Range de Camera -->
  <!-- Configuração do Checkbox -->
+<script>
 
- <script>
         $( function() {
           $( ".selecionar" ).checkboxradio({
             icon: false
@@ -381,7 +383,31 @@
         </div>
 </div>
 @endif
-
+@if (isset($email))
+<script type="text/javascript">
+    $(window).on('load',function(){
+        $('#sucessoEnvio').modal('show');
+    });
+</script>
+<div class="modal fade" id="sucessoEnvio" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <a class="close" data-dismiss="modal">×</a>
+            <h3>Contato</h3>
+            </div>
+            <div class="modal-body">
+                    <div class="alert alert-success">
+                            E-mail enviado com sucesso
+                    </div>
+                </div>
+                <div class="modal-footer">
+                        <a href="#" class="close" data-dismiss="modal" aria-label="close">Fechar</a>
+                </div>
+            </div>
+        </div>
+</div>
+@endif
 <!-- / Modal - Caso encontre erros no preenchimento -->
 </div>
 
@@ -414,7 +440,8 @@
 
                         <div id="sendmessage">Sua mensagem foi enviada! Obrigado</div>
                         <div id="errormessage"></div>
-                        <form id="contact-form" action="" method="post" role="form" class="contactForm">
+                        <form id="contact-form" action="/email" method="post" class="contactForm">
+                            @csrf
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
@@ -424,23 +451,23 @@
                                         <div class="validation"></div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="email">
+                                        <label for="emailinfo">
                                             E-mail </label>
                                         <div class="form-group">
-                                            <input type="email" class="form-control" name="email" id="email" placeholder="Seu E-mail" data-rule="email" data-msg="Digite um e-mail válido" />
+                                            <input type="email" class="form-control" name="emailinfo" id="emailinfo" placeholder="Seu E-mail" data-rule="emailcontact" data-msg="Digite um e-mail válido" required/>
                                             <div class="validation"></div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="subject">
                                             Assunto</label>
-                                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" data-msg="Digite pelo menos 8 caracteres" required />
                                         <div class="validation"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="name">
+                                        <label for="message">
                                             Mensagem</label>
                                         <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Escreva Algo para nós" placeholder="Message"></textarea>
                                         <div class="validation"></div>
@@ -497,7 +524,7 @@
     <script src="/js/wow.min.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="/js/custom.js"></script>
-    <script src="/js/contactform.js"></script>
+    {{-- <script src="/js/contactform.js"></script> --}}
 
     <!-- Recursos para o Questionario-Modal -->
     <script type="text/javascript" src="/js/MultiStep.min.js"></script>
