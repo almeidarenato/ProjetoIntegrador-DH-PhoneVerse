@@ -63,7 +63,7 @@
 
     <!-- Section: top3 -->
     <section id="top3" class="top3-section text-center" style="padding: 110px 0;">
-        
+
         <div class="heading-about">
             <div class="container">
                 <div class="row">
@@ -82,92 +82,105 @@
 
 <div class="container">
     <div class="row">
+        @if(!isset($aparelho) || $aparelho === '' )
+
+        <div class="alert alert-warning">
+                <strong>Não encontramos resultados para suas escolhas. clique em "ver mais" e explore outras opções disponíveis.</strong>
+            </div>
+    @else
+        </div>
         <div class="col-md-4">
             <div class="card">
                 <div class="wow bounceInUp" data-wow-delay="0.5s">
                     <div class="team boxed-grey">
                         <div class="inner">
                             <h5>1º Opção</h5>
-                            <p class="subtitle">{{$aparelho->marca}} {{$aparelho->modelo}}</p>
+                            <p class="subtitle">{{$aparelho[0]->modelo}}</p>
                             <div class="flip-card">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front">
-                                        <img src="/img/motorola_z2.jpg" alt="Avatar" style="width:250px;height:250px;">
+                                        <img src="{{asset($aparelho[0]->imagem)}}" alt="Avatar" style="width:250px;height:250px;">
                                     </div>
                                     <div class="flip-card-back">
                                         <ul class="p_description">
-                                            <li>Câmera:----</li>
-                                            <li>Memória RAM:----</li>
-                                            <li>Memória Interna:----</li>
-                                            <li>Preço:----</li>
+                                            <li>Câmera Frontal:<span class='atributo'> {{$aparelho[0]->camerafrontal}}  Mpx<span></li>
+                                            <li>Câmera Traseira:<span class='atributo'>  {{$aparelho[0]->cameratraseira}} Mpx <span></li>
+                                            <li>Memória RAM:<span class='atributo'> {{$aparelho[0]->memoriaram->quantidade}} Gb<span></li>
+                                            <li>Memória Interna:<span class='atributo'> {{$aparelho[0]->memoriainterna->quantidade}} Gb<span></li>
+                                            <li>Preço:<span class='atributo'>  R$ {{$aparelho[0]->preco}} <span></li>
                                         </ul>
                                     </div>
                                 </div>
-                            </div>                  
+                            </div>
                         </div>
                     </div>
                 </div>
-                <p class="botoes_top3"><button >Veja este smartphone</button></p>
+                <p class="botoes_top3"><button onclick="location.href='/aparelho/{{$aparelho[0]->id}}'">Veja este smartphone</button></p>
             </div>
         </div>
- 
+        @if(isset($aparelho[1]))
         <div class="col-md-4">
             <div class="card">
                 <div class="wow bounceInUp" data-wow-delay="0.5s">
                     <div class="team boxed-grey">
                         <div class="inner">
                             <h5>2º Opção</h5>
-                            <p class="subtitle">Xiaomi Mi 9</p>
+                            <p class="subtitle">{{$aparelho[1]->modelo}}</p>
                             <div class="flip-card">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front">
-                                        <img src="/img/xiaomi_mi9.jpg" alt="Avatar" style="width:250px;height:250px;">
+                                        <img src="{{asset($aparelho[1]->imagem)}}" alt="Avatar" style="width:250px;height:250px;">
                                     </div>
                                     <div class="flip-card-back">
                                         <ul class="p_description">
-                                            <li>Câmera:----</li>
-                                            <li>Memória RAM:----</li>
-                                            <li>Memória Interna:----</li>
-                                            <li>Preço:----</li>
+                                            <li>Câmera Frontal:<span class='atributo'> {{$aparelho[1]->camerafrontal}}  Mpx<span></li>
+                                            <li>Câmera Traseira:<span class='atributo'>  {{$aparelho[1]->cameratraseira}} Mpx <span></li>
+                                            <li>Memória RAM:<span class='atributo'> {{$aparelho[1]->memoriaram->quantidade}} Gb<span></li>
+                                            <li>Memória Interna:<span class='atributo'> {{$aparelho[1]->memoriainterna->quantidade}} Gb<span></li>
+                                            <li>Preço:<span class='atributo'>  R$ {{$aparelho[1]->preco}} <span></li>
                                         </ul>
                                     </div>
                                 </div>
-                            </div>                  
+                            </div>
                         </div>
                     </div>
                 </div>
-                <p class="botoes_top3"><button >Veja este smartphone</button></p>
+                <p class="botoes_top3"><button onclick="location.href='/aparelho/{{$aparelho[1]->id}}'">Veja este smartphone</button></p>
             </div>
         </div>
- 
+        @endif
+        @if(isset($aparelho[2]))
         <div class="col-md-4">
             <div class="card">
                 <div class="wow bounceInUp" data-wow-delay="0.5s">
                     <div class="team boxed-grey">
                         <div class="inner">
                             <h5>3º Opção</h5>
-                            <p class="subtitle">Asus Zenfone 6</p>
+                            <p class="subtitle">{{$aparelho[2]->modelo}}</p>
                             <div class="flip-card">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front">
-                                        <img src="/img/asus_zenfone_6.jpg" alt="Avatar" style="width:250px;height:250px;">
+                                        <img src="{{asset($aparelho[2]->imagem)}}" alt="Avatar" style="width:250px;height:250px;">
                                     </div>
                                     <div class="flip-card-back">
                                         <ul class="p_description">
-                                            <li>Câmera:----</li>
-                                            <li>Memória RAM:----</li>
-                                            <li>Memória Interna:----</li>
-                                            <li>Preço:----</li>
+                                            <li>Câmera Frontal:<span class='atributo'> {{$aparelho[2]->camerafrontal}}  Mpx<span></li>
+                                            <li>Câmera Traseira:<span class='atributo'>  {{$aparelho[2]->cameratraseira}} Mpx <span></li>
+                                            <li>Memória RAM:<span class='atributo'> {{$aparelho[2]->memoriaram->quantidade}} Gb<span></li>
+                                            <li>Memória Interna:<span class='atributo'> {{$aparelho[2]->memoriainterna->quantidade}} Gb<span></li>
+                                            <li>Preço:<span class='atributo'>  R$ {{$aparelho[2]->preco}} <span></li>
                                         </ul>
                                     </div>
                                 </div>
-                            </div>                  
+                            </div>
                         </div>
                     </div>
                 </div>
-                <p class="botoes_top3"><button >Veja este smartphone</button></p>
+            <p class="botoes_top3"><button onclick="location.href='/aparelho/{{$aparelho[2]->id}}'">Veja este smartphone</button></p>
             </div>
         </div>
+        @endif
+        @endif
     </div>
 </div>
     </section>
@@ -190,285 +203,51 @@
 <div id="accordion-resizer" class="ui-widget-content text-center">
 
     <div id="accordion" >
-        
+
         <h3 id='faixa-vermais'  >Ver mais...</h3>
- 
+
             <div>
             <section id="mais9" class="top3-section text-center" style='padding: 110px 0 '>
                 <div class="container" style='background-color:#E8EAEB'>
                 <div class="row">
-                <div class="col-md-4">
+
+                    {{-- inicio dos cards --}}
+            @foreach($aparelhosVerMais as $aparelhoVM)
+            <div class="col-md-4">
                     <div class="card">
                         <div class="wow bounceInUp" data-wow-delay="0.5s">
-                                <div class="team boxed-grey">
-                                    <div class="inner">
-                                            <h5>4º Opção</h5>
-                                            <p class="subtitle">Samsung J8</p>
-                                        <div class="flip-card">
-                                            <div class="flip-card-inner">
+                            <div class="team boxed-grey">
+                                <div class="inner">
+
+                                    <p class="subtitle" style='font-size:15px'>{{$aparelhoVM->modelo}}</p>
+                                    <div class="flip-card">
+                                        <div class="flip-card-inner">
                                             <div class="flip-card-front">
-                                                <img src="/img/samsung_j8.jpg" alt="Avatar" style="width:250px;height:250px;">
+                                                <img src="{{asset($aparelhoVM->imagem)}}" alt="Avatar" style="width:250px;height:250px;">
                                             </div>
-                                                <div class="flip-card-back">
-                                                    <ul class="p_description">
-                                                        <li>Câmera:----</li>
-                                                        <li>Memória RAM:----</li>
-                                                        <li>Memória Interna:----</li>
-                                                        <li>Preço:----</li>
-                                                    </ul>
-                                                </div>
+                                            <div class="flip-card-back">
+                                                <ul class="p_description">
+                                                    <li>Câmera Frontal:<span class='atributo'> {{$aparelhoVM->camerafrontal}}  Mpx<span></li>
+                                                    <li>Câmera Traseira:<span class='atributo'>  {{$aparelhoVM->cameratraseira}} Mpx <span></li>
+                                                    <li>Memória RAM:<span class='atributo'> {{$aparelhoVM->memoriaram->quantidade}} Gb<span></li>
+                                                    <li>Memória Interna:<span class='atributo'> {{$aparelhoVM->memoriainterna->quantidade}} Gb<span></li>
+                                                    <li>Preço:<span class='atributo'>  R$ {{$aparelhoVM->preco}} <span></li>
+                                                </ul>
                                             </div>
-                                        </div>                  
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        <p class="botoes_top3"><button >Veja este smartphone</button></p>
+                        </div>
+                        <p class="botoes_top3"><button onclick="location.href='/aparelho/{{$aparelhoVM->id}}'">Veja este smartphone</button></p>
                     </div>
                 </div>
-
-
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="wow bounceInUp" data-wow-delay="0.5s">
-                                <div class="team boxed-grey">
-                                    <div class="inner">
-                                            <h5>5º Opção</h5>
-                                            <p class="subtitle">Samsung A50</p>
-                                        <div class="flip-card">
-                                            <div class="flip-card-inner">
-                                            <div class="flip-card-front">
-                                                <img src="/img/samsung_a50.jpg" alt="Avatar" style="width:250px;height:250px;">
-                                            </div>
-                                                <div class="flip-card-back">
-                                                    <ul class="p_description">
-                                                        <li>Câmera:----</li>
-                                                        <li>Memória RAM:----</li>
-                                                        <li>Memória Interna:----</li>
-                                                        <li>Preço:----</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>                  
-                                    </div>
-                                </div>
-                            </div>
-                        <p class="botoes_top3"><button >Veja este smartphone</button></p>
-                    </div>
-                </div>
-
-
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="wow bounceInUp" data-wow-delay="0.5s">
-                                <div class="team boxed-grey">
-                                    <div class="inner">
-                                            <h5>6º Opção</h5>
-                                            <p class="subtitle">Iphone 10</p>
-                                        <div class="flip-card">
-                                            <div class="flip-card-inner">
-                                            <div class="flip-card-front">
-                                                <img src="/img/iphone_10.jpg" alt="Avatar" style="width:250px;height:250px;">
-                                            </div>
-                                                <div class="flip-card-back">
-                                                    <ul class="p_description">
-                                                        <li>Câmera:----</li>
-                                                        <li>Memória RAM:----</li>
-                                                        <li>Memória Interna:----</li>
-                                                        <li>Preço:----</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>                  
-                                    </div>
-                                </div>
-                            </div>
-                        <p class="botoes_top3"><button >Veja este smartphone</button></p>
-                    </div>
-                </div>
-
-
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="wow bounceInUp" data-wow-delay="0.5s">
-                                <div class="team boxed-grey">
-                                    <div class="inner">
-                                            <h5>7º Opção</h5>
-                                            <p class="subtitle">Iphone 8 Plus</p>
-                                        <div class="flip-card">
-                                            <div class="flip-card-inner">
-                                            <div class="flip-card-front">
-                                                <img src="/img/iphone_8plus.jpg" alt="Avatar" style="width:250px;height:250px;">
-                                            </div>
-                                                <div class="flip-card-back">
-                                                    <ul class="p_description">
-                                                        <li>Câmera:----</li>
-                                                        <li>Memória RAM:----</li>
-                                                        <li>Memória Interna:----</li>
-                                                        <li>Preço:----</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>                  
-                                    </div>
-                                </div>
-                            </div>
-                        <p class="botoes_top3"><button >Veja este smartphone</button></p>
-                    </div>
-                </div>
-
-
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="wow bounceInUp" data-wow-delay="0.5s">
-                                <div class="team boxed-grey">
-                                    <div class="inner">
-                                            <h5>8º Opção</h5>
-                                            <p class="subtitle">Sony Xperia XZ2</p>
-                                        <div class="flip-card">
-                                            <div class="flip-card-inner">
-                                            <div class="flip-card-front">
-                                                <img src="/img/sony_xperia_xz2.jpg" alt="Avatar" style="width:250px;height:250px;">
-                                            </div>
-                                                <div class="flip-card-back">
-                                                    <ul class="p_description">
-                                                        <li>Câmera:----</li>
-                                                        <li>Memória RAM:----</li>
-                                                        <li>Memória Interna:----</li>
-                                                        <li>Preço:----</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>                  
-                                    </div>
-                                </div>
-                            </div>
-                        <p class="botoes_top3"><button >Veja este smartphone</button></p>
-                    </div>
-                </div>
-
-
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="wow bounceInUp" data-wow-delay="0.5s">
-                                <div class="team boxed-grey">
-                                    <div class="inner">
-                                            <h5>9º Opção</h5>
-                                            <p class="subtitle">Huawei Mate 30</p>
-                                        <div class="flip-card">
-                                            <div class="flip-card-inner">
-                                            <div class="flip-card-front">
-                                                <img src="/img/huawei_mate_30.jpg" alt="Avatar" style="width:250px;height:250px;">
-                                            </div>
-                                                <div class="flip-card-back">
-                                                    <ul class="p_description">
-                                                        <li>Câmera:----</li>
-                                                        <li>Memória RAM:----</li>
-                                                        <li>Memória Interna:----</li>
-                                                        <li>Preço:----</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>                  
-                                    </div>
-                                </div>
-                            </div>
-                        <p class="botoes_top3"><button >Veja este smartphone</button></p>
-                    </div>
-                </div>
-
-
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="wow bounceInUp" data-wow-delay="0.5s">
-                                <div class="team boxed-grey">
-                                    <div class="inner">
-                                            <h5>10º Opção</h5>
-                                            <p class="subtitle">LG LK12+</p>
-                                        <div class="flip-card">
-                                            <div class="flip-card-inner">
-                                            <div class="flip-card-front">
-                                                <img src="/img/lg_kg12.jpg" alt="Avatar" style="width:250px;height:250px;">
-                                            </div>
-                                                <div class="flip-card-back">
-                                                    <ul class="p_description">
-                                                        <li>Câmera:----</li>
-                                                        <li>Memória RAM:----</li>
-                                                        <li>Memória Interna:----</li>
-                                                        <li>Preço:----</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>                  
-                                    </div>
-                                </div>
-                            </div>
-                        <p class="botoes_top3"><button >Veja este smartphone</button></p>
-                    </div>
-                </div>
-
-
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="wow bounceInUp" data-wow-delay="0.5s">
-                                <div class="team boxed-grey">
-                                    <div class="inner">
-                                            <h5>11º Opção</h5>
-                                            <p class="subtitle">Huawei Honor</p>
-                                        <div class="flip-card">
-                                            <div class="flip-card-inner">
-                                            <div class="flip-card-front">
-                                                <img src="/img/huawei_honor.jpg" alt="Avatar" style="width:250px;height:250px;">
-                                            </div>
-                                                <div class="flip-card-back">
-                                                    <ul class="p_description">
-                                                        <li>Câmera:----</li>
-                                                        <li>Memória RAM:----</li>
-                                                        <li>Memória Interna:----</li>
-                                                        <li>Preço:----</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>                  
-                                    </div>
-                                </div>
-                            </div>
-                        <p class="botoes_top3"><button >Veja este smartphone</button></p>
-                    </div>
-                </div>
-
-
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="wow bounceInUp" data-wow-delay="0.5s">
-                                <div class="team boxed-grey">
-                                    <div class="inner">
-                                            <h5>12º Opção</h5>
-                                            <p class="subtitle">Sony Xperia X</p>
-                                        <div class="flip-card">
-                                            <div class="flip-card-inner">
-                                            <div class="flip-card-front">
-                                                <img src="/img/sony_xperia_x.jpg" alt="Avatar" style="width:250px;height:250px;">
-                                            </div>
-                                                <div class="flip-card-back">
-                                                    <ul class="p_description">
-                                                        <li>Câmera:----</li>
-                                                        <li>Memória RAM:----</li>
-                                                        <li>Memória Interna:----</li>
-                                                        <li>Preço:----</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>                  
-                                    </div>
-                                </div>
-                            </div>
-                        <p class="botoes_top3"><button >Veja este smartphone</button></p>
-                    </div>
-                </div>
+                @endforeach
+{{-- fim dos cards --}}
 
             </section>
-        
-        </div>   
+
+        </div>
     </div>
 </div>
 

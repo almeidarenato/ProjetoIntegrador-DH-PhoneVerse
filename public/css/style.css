@@ -4,6 +4,16 @@
     Author: BootstrapMade
     Author URL: https://bootstrapmade.com
 */
+.accordion div p{
+    color:black;
+}
+.cell {
+    width: 400px;
+    height: 400px;
+}
+.atributo {
+color: #EA9F25;
+}
 
 #ui-id-1 {
   background-color:#E8EAEB;
@@ -36,7 +46,7 @@
 
 
 h3#faixa-vermais {
-  background-color:#4c174c; 
+  background-color:#4c174c;
   color:#fff;
 }
 
@@ -82,7 +92,7 @@ h3#faixa-vermais {
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: #bbb;
+  background-color: #fff;
   color: black;
 }
 

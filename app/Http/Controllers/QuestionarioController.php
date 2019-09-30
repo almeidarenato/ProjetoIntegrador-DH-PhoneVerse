@@ -216,15 +216,16 @@ class QuestionarioController extends Controller
         $precoate = 9000;
         return redirect('top3/precode/' . $precode . '/precoate/' . $precoate);
     }
+
     public function resultados($precode, $precoate)
     {
-        $aparelho = Aparelho::all()->whereBetween('preco', array($precode, $precoate))
-            ->where('id', 6);
-
-
-        print_r($aparelho);
-        exit;
-        return redirect('top3/id/');
+        // $aparelho = Aparelho::all()->whereBetween('preco', array($precode, $precoate))
+        //    ->where('id', 6);
+        //$aparelhoTop3 = '';
+        $aparelhoTop3 = Aparelho::orderBy('id', 'ASC')->take(3)->get();
+        $aparelhostop3ids = Aparelho::orderBy('id', 'ASC')->take(3)->select('id')->get()->toArray();
+        $aparelhosVerMais = Aparelho::whereNotIn('id', $aparelhostop3ids)->take(9)->get();
+        return view('top_page')->with(['aparelho' => $aparelhoTop3, 'aparelhosVerMais' => $aparelhosVerMais]);
     }
 
 
