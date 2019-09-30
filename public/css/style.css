@@ -4,6 +4,9 @@
     Author: BootstrapMade
     Author URL: https://bootstrapmade.com
 */
+.accordion div p{
+    color:black;
+}
 .cell {
     width: 400px;
     height: 400px;
