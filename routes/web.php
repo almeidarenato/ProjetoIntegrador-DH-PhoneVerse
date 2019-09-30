@@ -25,13 +25,13 @@ Route::get('/respostas', function () {
     return view('respostas');
 });
 
-Route::post('/respostas', 'QuestionarioController@cadastrar');
+Route::post('/top3', 'QuestionarioController@cadastrar');
 
-Route::get('/top3/', 'QuestionarioController@teste');
+Route::get('/top3', 'QuestionarioController@teste');
 
 
 //rota me ajude a escolher
-Route::get('/top3/aaa', 'QuestionarioController@resultados');
+Route::get('top3/aparelho/{aparelho}/motivo/{motivo}/usocelular/{usocelular}', 'QuestionarioController@resultados');
 //rota eu sei oque estou fazendo
 Route::get('/top3/precode/{precode}/precoate/{precoate}', 'QuestionarioController@resultados');
 //Route::get('/top3/aparelho/{aparelho?}/motivo/{motivo?}/usocelular/{usocelular]', 'QuestionarioController@resultados');

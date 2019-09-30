@@ -11,6 +11,11 @@ use App\Mail\TestEmail;
 use App\Mail\ContactEmail;
 use Mail;
 
+// authentication
+
+use App\Http\Controllers\Controller;
+use Auth;
+
 class QuestionarioController extends Controller
 {
 
@@ -57,7 +62,9 @@ class QuestionarioController extends Controller
                     'motivo' => $request->input('resp3'),
                     'usoCelular' => $request->input('resp4')
                 ]);
+
                 $user->save();
+                Auth::login($user);
             }
 
             // meu celular vive na tomada = > 3000
@@ -70,9 +77,7 @@ class QuestionarioController extends Controller
             // trabalhar e video = bateria >= 4000
             // tirar foto = camera frontal > 30 camera traseira > 40
 
-
-
-            return redirect('top3/aaa/' . $request->input('precoDe'));
+            return redirect('top3/aparelho/' . $request->input('aparelho') . '/motivo/' . $request->input('resp3') . '/usocelular/' . $request->input('resp4'));
         } else {
             // usuario escolheu o formulario da esquerda
 
@@ -198,6 +203,7 @@ class QuestionarioController extends Controller
                 ]);
 
                 $user->save();
+                Auth::login($user);
                 //
             }
             return redirect('top3/precode/' . $request->input('precoDe') . '/precoate/' . $request->input('precoAte'));
@@ -217,7 +223,7 @@ class QuestionarioController extends Controller
         return redirect('top3/precode/' . $precode . '/precoate/' . $precoate);
     }
 
-    public function resultados($precode, $precoate)
+    public function resultados($precode = 0, $precoate = 0)
     {
         // $aparelho = Aparelho::all()->whereBetween('preco', array($precode, $precoate))
         //    ->where('id', 6);
