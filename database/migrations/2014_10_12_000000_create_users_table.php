@@ -51,6 +51,7 @@ class CreateUsersTable extends Migration
             $table->integer('precoAte')->nullable();
             $table->integer('memoriaInterna')->nullable();
             $table->integer('memoriaRam')->nullable();
+            $table->integer('nivelAcesso')->default(0);
         });
     }
 
