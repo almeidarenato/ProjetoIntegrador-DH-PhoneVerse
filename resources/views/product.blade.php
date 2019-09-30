@@ -92,10 +92,11 @@
                 <div class="col-md-12">
                     <div class="wow bounceInUp" data-wow-delay="0.2s">
                         <div class="team boxed-grey">
-                            <div class="inner">
-                                <h5>1º Opção</h5>
+                            <div class="inner" style='padding:40px'>
                                 <p class="subtitle">{{$aparelho->modelo}}</p>
-                                <div class="avatar"><img src="{{asset($aparelho->imagem)}}" alt="" class="img-responsive" /></div>
+
+                                <div class=" col-4 rounded img-thumbnail"><img src="{{asset($aparelho->imagem)}}" alt="" class="cell mx-auto d-block" /></div>
+
                                 <ul class="product_page_description">
                                     <li>Marca: {{ $aparelho->marca->nome}}</li>
                                     <li>Sistema Operacional: {{ $aparelho->sistemaoperacional->nome}} {{ $aparelho->sistemaoperacional->versao }}</li>

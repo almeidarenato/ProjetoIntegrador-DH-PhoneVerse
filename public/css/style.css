@@ -4,6 +4,10 @@
     Author: BootstrapMade
     Author URL: https://bootstrapmade.com
 */
+.cell {
+    width: 400px;
+    height: 400px;
+}
 .atributo {
 color: #EA9F25;
 }
