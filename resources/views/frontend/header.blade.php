@@ -20,16 +20,16 @@
                 <li class="dropdown">
 
                     @guest
-                    <a href="/login" >Login</a>
+                    <a class="btn-skin" href="/login" >Login</a>
                     @else
-                <a href="" class="dropdown-toggle" data-toggle="dropdown"> Olá, <span > {{Auth::user()->name}}</span><b class="caret"></b> </a>
+                <a href="" class="dropdown-toggle btn-skin" data-toggle="dropdown"> Olá, <span > {{Auth::user()->name}}</span><b class="caret"></b> </a>
                     <ul class="dropdown-menu" >
                             @if(Auth::user()->nivelAcesso === 0)
                             <li><a href="/admin/my">Minhas Respostas</a></li>
                             @else
                             <li><a href="/admin/dashboard">Dashboard</a></li>
                             @endif
-                            <li><a href="{{route('logout')}}" class="nav-link"
+                            <li><a href="{{route('logout')}}" class="nav-link "
                                 onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
                                 {{ __('Sair') }}

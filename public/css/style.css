@@ -544,6 +544,8 @@ h3#faixa-vermais {
 
   .avatar {
     margin-bottom: 20px;
+    display:table;
+    margin: 0 auto;
   }
 
   .team-social {
@@ -838,11 +840,11 @@ h3#faixa-vermais {
     height: 70px;
     margin-top: 15px;
     padding: 7px 16px;
-    border: 2px solid #ffffff;
+    border: 2px solid #ea9f25;
     border-radius: 50%;
     font-size: 40px;
-    color: #ffffff;
-    background: 0 0;
+    background-color: rgba(0,0,0,0.5);
+    color: #ea9f25;
     -webkit-transition: background 0.3s ease-in-out;
     -moz-transition: background 0.3s ease-in-out;
     transition: background 0.3s ease-in-out;
@@ -1006,6 +1008,19 @@ h3#faixa-vermais {
   }
 
   @media (max-width: 480px) {
+
+    .modal-steps {
+        display: table;
+        margin: 0 auto;
+        width: 40px;
+    }
+    #imgescolha {
+        width:100px;
+    }
+    .intro .slogan span {
+        font-size: 17px;
+        color: #ea9f25;
+    }
     .navbar-custom .nav.navbar-nav {
       background-color: rgba(255, 255, 255, 0.4);
     }

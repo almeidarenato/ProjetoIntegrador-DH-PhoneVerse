@@ -17,9 +17,9 @@
 
               <li class="dropdown">
                     @guest
-                    <a href="/login" >Login</a>
+                    <a href="/login" class="btn-skin"  >Login</a>
                     @else
-                    <a href="" class="dropdown-toggle" data-toggle="dropdown"> Olá, <span > {{Auth::user()->name}}</span><b class="caret"></b> </a>
+                    <a href="" class="dropdown-toggle btn-skin" data-toggle="dropdown"> Olá, <span > {{Auth::user()->name}}</span><b class="caret"></b> </a>
                     <ul class="dropdown-menu" >
                             @if(Auth::user()->nivelAcesso === 0)
                             <li><a href="/admin/my">Minhas Respostas</a></li>

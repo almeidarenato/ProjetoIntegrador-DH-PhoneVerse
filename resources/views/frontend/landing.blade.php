@@ -181,7 +181,7 @@
                     <div class="wow fadeInUp" data-wow-delay="0.2s">
                         <div class="service-box">
                             <div class="service-icon">
-                                <img src="/img/think.png" alt="" />
+                                <img id='imgescolha' src="/img/think.png" alt="" />
                             </div>
                             <div class="service-desc">
                                 <h5>Me ajude a escolher</h5>
@@ -195,7 +195,7 @@
                     <div class="wow fadeInRight" data-wow-delay="0.2s">
                         <div class="service-box">
                             <div class="service-icon">
-                                <img src="/img/light.png" alt="" />
+                                <img id='imgescolha' src="/img/light.png" alt="" />
                             </div>
                             <div class="service-desc">
                                 <h5>Eu sei exatamente o que preciso</h5>
@@ -503,7 +503,7 @@
                                     <p>&copy;PhoneVerse</p>
                                     <div class="credits">
 
-                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalFAQ">
+                                        <button type="button" class="btn btn-skin" data-toggle="modal" data-target="#modalFAQ">
                                             Perguntas Frequentes
                                         </button>
                                     </div>

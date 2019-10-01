@@ -2,7 +2,6 @@
 .multi-step * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: Roboto, sans-serif;
 }
 .multi-step ::after,
 .multi-step ::before {
