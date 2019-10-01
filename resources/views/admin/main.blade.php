@@ -43,7 +43,7 @@ crossorigin="anonymous"
             })
             </script>
     <nav class="navbar navbar-expand-md fixed-top navbar-dark  bg-purple">
-        <a class="navbar-brand" href="#"
+        <a class="navbar-brand" href="/"
         ><img class="logo" src={{asset("img/logo.png")}} alt="logo phoneverse"
         /></a>
         <button
@@ -58,6 +58,9 @@ crossorigin="anonymous"
     class="navbar-collapse offcanvas-collapse"
     id="navbarsExampleDefault"
     >
+    @if(Auth::user()->nivelAcesso === 0)
+
+    @else
     <ul class="navbar-nav mr-auto">
         <li class="nav-item">
             <a class="nav-link" href="/admin/dashboard"
@@ -91,11 +94,20 @@ crossorigin="anonymous"
                 <a class="dropdown-item" href="/admin/slotsim">Slot Sim</a>
             </div>
         </li>
+
     </ul>
+    @endif
+    <div class="my-2">
+        <a href="" class="nav-link pr4"> Olá, <span class='username'> {{Auth::user()->name}}</span> </a>
+    </div>
     <div class="my-2 my-lg-0">
-        <button type="button" class="btn btn-outline-primary">
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" >
+        @csrf
+        <button type="submit" class="btn btn-outline-primary">
             Sair
         </button>
+    </form>
     </div>
 </div>
 </nav>

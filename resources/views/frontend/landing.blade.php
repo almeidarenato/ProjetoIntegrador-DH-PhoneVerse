@@ -198,7 +198,7 @@
                                 <img src="/img/light.png" alt="" />
                             </div>
                             <div class="service-desc">
-                                <h5>Eu sei exatamente oque preciso</h5>
+                                <h5>Eu sei exatamente o que preciso</h5>
                                 <p>Escolhendo esta opção, você poderá escolher cada detalhe especifico dos aparelhos que deseja ver. </h2>
                                 </p>
                                 <button type="button" class="buttonsp" data-toggle="modal" data-target="#direita" id='btdireita'>Eu me viro</button>

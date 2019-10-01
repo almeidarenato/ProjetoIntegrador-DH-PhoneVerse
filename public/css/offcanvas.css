@@ -32,6 +32,9 @@ body {
     }
 }
 
+.username {
+    color: #ea9f25;
+}
 .nav-scroller {
     position: relative;
     z-index: 2;
