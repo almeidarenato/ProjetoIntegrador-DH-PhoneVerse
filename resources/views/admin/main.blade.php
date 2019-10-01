@@ -58,6 +58,9 @@ crossorigin="anonymous"
     class="navbar-collapse offcanvas-collapse"
     id="navbarsExampleDefault"
     >
+    @if(Auth::user()->nivelAcesso === 0)
+
+    @else
     <ul class="navbar-nav mr-auto">
         <li class="nav-item">
             <a class="nav-link" href="/admin/dashboard"
@@ -93,6 +96,7 @@ crossorigin="anonymous"
         </li>
 
     </ul>
+    @endif
     <div class="my-2">
         <a href="" class="nav-link pr4"> Olá, <span class='username'> {{Auth::user()->name}}</span> </a>
     </div>

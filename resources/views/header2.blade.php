@@ -22,7 +22,7 @@
                     <a href="" class="dropdown-toggle" data-toggle="dropdown"> Olá, <span > {{Auth::user()->name}}</span><b class="caret"></b> </a>
                     <ul class="dropdown-menu" >
                             @if(Auth::user()->nivelAcesso === 0)
-                            <li><a href="#">Minhas Respostas</a></li>
+                            <li><a href="/admin/my">Minhas Respostas</a></li>
                             @else
                             <li><a href="/admin/dashboard">Dashboard</a></li>
                             @endif

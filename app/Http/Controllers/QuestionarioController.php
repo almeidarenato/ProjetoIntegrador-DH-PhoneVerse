@@ -214,6 +214,11 @@ class QuestionarioController extends Controller
         // return redirect('top3/precode/' . $precode . '/precoate/' .$precoate);
 
     }
+    public function listarRespostas()
+    {
+
+        return view('admin.my');
+    }
 
 
     public function teste()
