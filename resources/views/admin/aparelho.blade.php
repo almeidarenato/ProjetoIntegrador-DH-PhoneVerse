@@ -29,7 +29,7 @@
 
 </div>
 @endif
-<div class="my-3 p-3 bg-white rounded box-shadow">
+<div class="my-3 p-3 bg-white rounded box-shadow" id='formcontent'>
 
   <a name="" id="" class="btn btn-primary" href="#" role="button" data-toggle="modal" data-target="#adicionar">Incluir Novo Aparelho Celular <i class="fa fa-plus" aria-hidden="true"></i></a>
   <div class="media pt-3">

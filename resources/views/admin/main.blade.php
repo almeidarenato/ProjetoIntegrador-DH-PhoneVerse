@@ -112,7 +112,7 @@ crossorigin="anonymous"
 </div>
 </nav>
 
-<main role="main" class="container">
+<main role="main" class="container" id='maincontent'>
     <div
     class="d-flex align-items-center p-3 my-3 text-white-50 bg-dark rounded box-shadow"
     >
@@ -135,7 +135,7 @@ crossorigin="anonymous"
     d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
     ></path>
 </svg>
-<div class="lh-100" style='margin-left:10px'>
+<div class="lh-100" style='margin-left:10px' id='titlecontent'>
 <h6 class='mb-0 text-white lh-100'> @yield('title') </h6>
 <small>Cadastro e Edição</small>
 </div>

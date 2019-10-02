@@ -86,12 +86,12 @@ crossorigin="anonymous"
 </div>
 </nav>
 
-<main role="main" class="container">
+<main role="main" class="container" id='maincontent'>
     <div
     class="d-flex align-items-center p-3 my-3 text-white-50 bg-dark rounded box-shadow"
     >
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-<div class="lh-100" style='margin-left:10px'>
+<div class="lh-100" style='margin-left:10px' id='titlecontent'>
 <h6 class='mb-0 text-white lh-100'> Login </h6>
 
 </div>

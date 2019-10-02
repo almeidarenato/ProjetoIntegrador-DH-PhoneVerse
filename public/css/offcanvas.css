@@ -6,7 +6,15 @@ body {
 body {
     padding-top: 56px;
 }
-
+#maincontent {
+    margin-top: 50px;
+}
+#titlecontent {
+    margin-bottom: 0rem !important;
+}
+#formcontent {
+    margin-top: 0rem !important;
+}
 @media (max-width: 767.98px) {
     .offcanvas-collapse {
         position: fixed;
