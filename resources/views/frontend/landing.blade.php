@@ -14,8 +14,8 @@
 
     <!-- JQuery UI + JQUERY-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/css/bootstrap-slider.min.css">
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{{asset('css/jquery-ui.css')}}">
+    <script src="{{asset('js/jquery.min.js')}}"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/fd9dba5260.js"></script>
@@ -174,38 +174,39 @@
                 <div class="row">
                     <div class="col-lg-2 col-lg-offset-5">
                         <hr class="marginbot-50">
-                    </div>
+                                            </div>
                 </div>
 
                 <div class="col-md-6">
-                    <div class="wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="service-box">
-                            <div class="service-icon">
-                                <img id='imgescolha' src="/img/think.png" alt="" />
-                            </div>
-                            <div class="service-desc">
-                                <h5>Me ajude a escolher</h5>
-                                <p>Escolhendo esta opção, nós te mostraremos as melhores opções de aparelhos com base em suas respostas em um rápido questionário </p>
-                                <button type="button" class="buttonsp" data-toggle="modal" data-target="#esquerda" id='btesquerda' >Preciso de Ajuda</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="wow fadeInRight" data-wow-delay="0.2s">
-                        <div class="service-box">
-                            <div class="service-icon">
-                                <img id='imgescolha' src="/img/light.png" alt="" />
-                            </div>
-                            <div class="service-desc">
-                                <h5>Eu sei exatamente o que preciso</h5>
-                                <p>Escolhendo esta opção, você poderá escolher cada detalhe especifico dos aparelhos que deseja ver. </h2>
-                                </p>
-                                <button type="button" class="buttonsp" data-toggle="modal" data-target="#direita" id='btdireita'>Eu me viro</button>
+                        <div class="wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="service-box">
+                                <div class="service-icon">
+                                    <img id='imgescolha' src="/img/think.png" alt="" />
+                                </div>
+                                <div class="service-desc">
+                                    <h5>Me ajude a escolher</h5>
+                                    <p>Escolhendo esta opção, nós te mostraremos as melhores opções de aparelhos com base em suas respostas em um rápido questionário </p>
+                                    <button type="button" class="buttonsp" data-toggle="modal" data-target="#esquerda" id='btesquerda' >Preciso de Ajuda</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <div class="col-md-6">
+                        <div class="wow fadeInRight" data-wow-delay="0.2s">
+                            <div class="service-box">
+                                <div class="service-icon">
+                                    <img id='imgescolha' src="/img/light.png" alt="" />
+                                </div>
+                                <div class="service-desc">
+                                    <h5>Eu sei exatamente o que preciso</h5>
+                                    <p>Escolhendo esta opção, você poderá escolher cada detalhe especifico dos aparelhos que deseja ver. </h2>
+                                    </p>
+                                    <button type="button" class="buttonsp" data-toggle="modal" data-target="#direita" id='btdireita'>Eu me viro</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
 
 
                 <script>
@@ -589,7 +590,7 @@
                 <!-- Recursos para o Questionario-Modal -->
                 <script type="text/javascript" src="/js/MultiStep.min.js"></script>
                 <script type="text/javascript" src="/js/questionario.js"></script>
-                <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+                <script src="{{asset('js/jquery-ui.js')}}"></script>
 
             </body>
             </html>

@@ -11,11 +11,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('css/cards.css')}}">
 
-    <script
-src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-crossorigin="anonymous"
-></script>
+    <script src="{{asset('js/jquery.min.js')}}"></script>
 @yield('head-script')
 <style>
     * {
@@ -98,13 +94,13 @@ crossorigin="anonymous"
     </ul>
     @endif
     <div class="my-2">
-        <a href="" class="nav-link pr4"> Olá, <span class='username'> {{Auth::user()->name}}</span> </a>
+        <a href="" class="nav-link pr4" id='loginname' disabled="disabled"> Olá, <span class='username'> {{Auth::user()->name}}</span> </a>
     </div>
     <div class="my-2 my-lg-0">
 
             <form id="logout-form" action="{{ route('logout') }}" method="POST" >
         @csrf
-        <button type="submit" class="btn btn-outline-primary">
+        <button type="submit" class="btn ">
             Sair
         </button>
     </form>
@@ -112,7 +108,7 @@ crossorigin="anonymous"
 </div>
 </nav>
 
-<main role="main" class="container">
+<main role="main" class="container" id='maincontent'>
     <div
     class="d-flex align-items-center p-3 my-3 text-white-50 bg-dark rounded box-shadow"
     >
@@ -135,7 +131,7 @@ crossorigin="anonymous"
     d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
     ></path>
 </svg>
-<div class="lh-100" style='margin-left:10px'>
+<div class="lh-100" style='margin-left:10px' id='titlecontent'>
 <h6 class='mb-0 text-white lh-100'> @yield('title') </h6>
 <small>Cadastro e Edição</small>
 </div>

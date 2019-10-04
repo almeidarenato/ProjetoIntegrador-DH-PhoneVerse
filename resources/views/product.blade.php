@@ -93,7 +93,7 @@
                     <div class="wow bounceInUp" data-wow-delay="0.2s">
                         <div class="team boxed-grey">
                             <div class="inner" style='padding:40px'>
-                                <p class="subtitle">{{$aparelho->modelo}}</p>
+
 
                                 <div class=" col-4 rounded img-thumbnail"><img src="{{asset($aparelho->imagem)}}" alt="" class="cell mx-auto d-block" /></div>
 
@@ -110,12 +110,18 @@
                                     <li>Preço: R$ {{ $aparelho->preco }}</li>
                                 </ul>
                             </div>
+                            <form>
+                                    <input type="button" class='btn btn-skin' value="Voltar" onclick="history.back()">
+                                  </form>
                         </div>
                     </div>
+
                 </div>
+
             </div>
 
     </section>
+
     <footer>
         <div class="container">
             <div class="row">
@@ -128,14 +134,7 @@
                         </div>
                     </div>
                     <p>&copy;PhoneVerse.</p>
-                    <div class="credits">
-                        <!--
-                  All the links in the footer should remain intact.
-                  You can delete the links only if you purchased the pro version.
-                  Licensing information: https://bootstrapmade.com/license/
-                  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Squadfree
-                -->
-                        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+
                     </div>
                 </div>
             </div>

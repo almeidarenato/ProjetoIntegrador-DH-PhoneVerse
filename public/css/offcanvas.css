@@ -3,11 +3,28 @@ body {
     overflow-x: hidden; /* Prevent scroll on narrow devices */
 }
 
+/* ==== Google font ==== */
+
 body {
     padding-top: 56px;
 }
-
+#maincontent {
+    margin-top: 50px;
+}
+#titlecontent {
+    margin-bottom: 0rem !important;
+}
+#formcontent {
+    margin-top: 0rem !important;
+}
+#loginname {
+    color: white !important;
+    cursor: default;
+}
 @media (max-width: 767.98px) {
+    .text-right {
+        text-align: left !important;
+    }
     .offcanvas-collapse {
         position: fixed;
         top: 56px; /* Height of navbar */
@@ -102,5 +119,9 @@ nav.bg-purple {
     background: #4c174c;
 }
 img.logo {
-    width: 100px;
+    width: 150px;
+}
+#mainbutton {
+    display: table;
+    margin: 0 auto;
 }
