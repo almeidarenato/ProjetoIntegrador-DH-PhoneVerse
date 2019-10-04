@@ -119,3 +119,8 @@ Route::get('/aparelho/{id}', 'aparelhoController@encontrandoAparelho');
 
 //Informações para top 3
 Route::get('/top_page/', 'aparelhoController@encontrandoAparelho');
+
+// mobile
+Route::get('/mobile', function () {
+    return view('mobile');
+});
