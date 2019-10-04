@@ -60,7 +60,7 @@
     -webkit-flex: 1 0 auto;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
-    font-size: 0.8rem;
+    font-size: 2rem;
 }
 .multi-step .modal-header .modal-steps {
     -webkit-box-flex: 0;
@@ -170,7 +170,7 @@
     border-radius: 20px;
 }
 .multi-step .modal-header .modal-steps .step .label {
-    font-size: 12px;
+    font-size: 11px;
     display: block;
     margin: 0.5em 0;
     text-align: center;
