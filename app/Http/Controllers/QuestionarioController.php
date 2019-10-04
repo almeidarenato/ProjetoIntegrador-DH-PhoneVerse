@@ -228,13 +228,19 @@ class QuestionarioController extends Controller
         return redirect('top3/precode/' . $precode . '/precoate/' . $precoate);
     }
 
-    public function resultados($precode = 0, $precoate = 0)
+    public function resultados($precode = 0, $precoate = 0, $aparelho = 0)
     {
         // $aparelho = Aparelho::all()->whereBetween('preco', array($precode, $precoate))
         //    ->where('id', 6);
         //$aparelhoTop3 = '';
-        $aparelhoTop3 = Aparelho::orderBy('id', 'ASC')->take(3)->get();
-        $aparelhostop3ids = Aparelho::orderBy('id', 'ASC')->take(3)->select('id')->get()->toArray();
+        if ($precode == NULL) {
+            $aparelhoTop3 = Aparelho::orderBy('id', 'DESC')->take(3)->get();
+            $aparelhostop3ids = Aparelho::orderBy('id', 'DESC')->take(3)->select('id')->get()->toArray();
+        } else {
+
+            $aparelhoTop3 = Aparelho::orderBy('id', 'ASC')->take(3)->get();
+            $aparelhostop3ids = Aparelho::orderBy('id', 'ASC')->take(3)->select('id')->get()->toArray();
+        }
         $aparelhosVerMais = Aparelho::whereNotIn('id', $aparelhostop3ids)->take(9)->get();
         return view('top_page')->with(['aparelho' => $aparelhoTop3, 'aparelhosVerMais' => $aparelhosVerMais]);
     }

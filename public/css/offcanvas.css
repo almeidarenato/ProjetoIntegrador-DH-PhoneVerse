@@ -3,6 +3,8 @@ body {
     overflow-x: hidden; /* Prevent scroll on narrow devices */
 }
 
+/* ==== Google font ==== */
+
 body {
     padding-top: 56px;
 }
@@ -14,6 +16,10 @@ body {
 }
 #formcontent {
     margin-top: 0rem !important;
+}
+#loginname {
+    color: white !important;
+    cursor: default;
 }
 @media (max-width: 767.98px) {
     .text-right {
@@ -113,5 +119,9 @@ nav.bg-purple {
     background: #4c174c;
 }
 img.logo {
-    width: 100px;
+    width: 150px;
+}
+#mainbutton {
+    display: table;
+    margin: 0 auto;
 }

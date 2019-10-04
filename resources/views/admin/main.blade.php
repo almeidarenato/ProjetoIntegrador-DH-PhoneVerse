@@ -94,13 +94,13 @@
     </ul>
     @endif
     <div class="my-2">
-        <a href="" class="nav-link pr4"> Olá, <span class='username'> {{Auth::user()->name}}</span> </a>
+        <a href="" class="nav-link pr4" id='loginname' disabled="disabled"> Olá, <span class='username'> {{Auth::user()->name}}</span> </a>
     </div>
     <div class="my-2 my-lg-0">
 
             <form id="logout-form" action="{{ route('logout') }}" method="POST" >
         @csrf
-        <button type="submit" class="btn btn-outline-primary">
+        <button type="submit" class="btn ">
             Sair
         </button>
     </form>
