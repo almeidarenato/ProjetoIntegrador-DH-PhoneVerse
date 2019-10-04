@@ -6,21 +6,21 @@
 
 ## Índice
 
-- [1. Escopo](#1escopo)
-- [2. Equipe](#2equipe)
-- [3. Sprint](#3sprints)
+-   [1. Escopo](#1escopo)
+-   [2. Equipe](#2equipe)
+-   [3. Sprint](#3sprints)
 
 ## 1.Escopo
 
 ##### 1.1 Tipo de projeto:
 
-E-commerce de smartphones
+Site - Consultoria de Smartphones
 
 #### 1.2 Diferenciais:
 
-E-commerce com informações detalhadas e modelos de smartphones e notas de profissionais e notas de usuários.
+Site com informações detalhadas sobre smartphones
 
-Cliente poderá ver todas as informações sobre os aparelhos das principais marcas, comparar entre eles e ao final comprar sem sair do site.
+O usuário através de questionários no site saberá qual o melhor smartphone para seu perfil com todos os dados relevantes para escolha final.
 
 ## 2.Equipe
 
@@ -35,20 +35,36 @@ Cliente poderá ver todas as informações sobre os aparelhos das principais mar
 
 ### Data de Início - 24/06/2019
 
-### Sprint 1 - 03/07/2019
+### Data de Término - 04/10/2019
 
-#### Atividades:
+## 4. Tecnologias
 
-1. Definição do Nome
-2. Definição do Template
-3. Criação do Repositório no git
-4. Commit Inicial com os dados do projeto
+-   HTML, CSS , Javascript
+-   PHP
+-   Laravel
+-   Jquery + Jquery UI
+-   Sendgrid (smtp e template de email)
 
-### Sprint 2 - 17/07/2019
+## 5. Créditos
 
-#### Atividades:
+### Template BootstrapMade - SquadFree
 
-1. Aplicar os Estilos da Página - CSS
-2. Determinar que todas as páginas estejam com responsividade
-3. Aplicar o conceito DRY - Don't Repeat Yourself
-4. Aplicar efeitos com javascript
+https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/
+
+### Multistep Modal Form - Modal Questionário
+
+https://github.com/BhavanPatel/jquery-bootstrap-modal-stepwise
+
+### Jquery & Jquery UI - Efeitos diversos
+
+https://jquery.com/
+
+https://jqueryui.com/
+
+### Counter UP - Efeito de contagem
+
+https://github.com/bfintal/Counter-Up
+
+### Feather Icons - Ícones diversos
+
+https://feathericons.com
