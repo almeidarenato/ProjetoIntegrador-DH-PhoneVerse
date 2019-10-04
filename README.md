@@ -9,6 +9,8 @@
 -   [1. Escopo](#1escopo)
 -   [2. Equipe](#2equipe)
 -   [3. Sprint](#3sprints)
+-   [4. Tecnologias](#4tecnologias)
+-   [5. Créditos](#5créditos)
 
 ## 1.Escopo
 
@@ -37,7 +39,7 @@ O usuário através de questionários no site saberá qual o melhor smartphone p
 
 ### Data de Término - 04/10/2019
 
-## 4. Tecnologias
+## 4.Tecnologias
 
 -   HTML, CSS , Javascript
 -   PHP
@@ -45,7 +47,7 @@ O usuário através de questionários no site saberá qual o melhor smartphone p
 -   Jquery + Jquery UI
 -   Sendgrid (smtp e template de email)
 
-## 5. Créditos
+## 5.Créditos
 
 ### Template BootstrapMade - SquadFree
 
