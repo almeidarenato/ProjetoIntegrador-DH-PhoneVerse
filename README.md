@@ -53,9 +53,9 @@ O usuário através de questionários no site saberá qual o melhor smartphone p
 
 https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/
 
-### Multistep Modal Form - Modal Questionário
+### Multistep Modal Form by Kinle - Modal Questionário
 
-https://github.com/BhavanPatel/jquery-bootstrap-modal-stepwise
+https://github.com/Kinle/MultiStep
 
 ### Jquery & Jquery UI - Efeitos diversos
 
